@@ -1,14 +1,19 @@
 var mainHamburgerButtonClickEvent = function () {
-    const HEADER_ID = 'header';
-    const HAMBURGER_BUTTON_ID = 'hamburgerButton';
+    const VISIBILITY_VISIBLE = 'visible';
 
-    var header = document.getElementById(HEADER_ID);
-    var hamburgerButtons = Array.from(document.getElementsByClassName(HAMBURGER_BUTTON_ID));
+    var headerStyle = document.getElementById(HEADER_ID).style;
+    var hamburgerButtons = Array.from(document.getElementsByClassName(HAMBURGER_BUTTON_CLASS));
 
-    header.style.setProperty('transition', 'width 0.35s linear');
-    header.style.setProperty('width', '150px');
+    headerStyle.setProperty('transition', 'width 0.35s linear');
+    headerStyle.setProperty('width', '200px');
 
     hamburgerButtons.forEach(function (hamburgerButton) {
-        console.log('TODO: get child nodes and set them visible:true');
+        if (hamburgerButton.className === HAMBURGER_BUTTON_CLASS) {
+            hamburgerButton.childNodes.forEach(function (hamburgerButtonChildNode) {
+                if (hamburgerButtonChildNode.nodeName === H2_TAG) {
+                    hamburgerButtonChildNode.style.setProperty('visibility', VISIBILITY_VISIBLE);
+                }
+            });
+        }
     });
 };

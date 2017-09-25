@@ -1,0 +1,1 @@
+const HAMBURGER_BUTTON_CLASS = 'hamburgerButton';

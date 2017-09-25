@@ -58,8 +58,6 @@
     -webkit-transform: translate(50px, -150%);
     -ms-transform: translate(50px, -150%);
     transform: translate(50px, -150%);
-}
-
-.hamburgerButton:hover > h2{
-    visibility: visible;
+    
+    color:rgb(0, 130, 132);
 }

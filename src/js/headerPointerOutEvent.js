@@ -1,8 +1,19 @@
 var headerPointerOutEvent = function () {
-    const HEADER_ID = 'header';
+    const VISIBILITY_HIDDEN = 'hidden';
 
-    var header = document.getElementById(HEADER_ID);
+    var headerStyle = document.getElementById(HEADER_ID).style;
+    var hamburgerButtons = Array.from(document.getElementsByClassName(HAMBURGER_BUTTON_CLASS));
 
-    header.style.setProperty('transition', 'width 0.35s linear');
-    header.style.setProperty('width', '52px');
+    headerStyle.setProperty('transition', 'width 0.35s linear');
+    headerStyle.setProperty('width', '52px');
+
+    hamburgerButtons.forEach(function (hamburgerButton) {
+        if (hamburgerButton.className === HAMBURGER_BUTTON_CLASS) {
+            hamburgerButton.childNodes.forEach(function (hamburgerButtonChildNode) {
+                if (hamburgerButtonChildNode.nodeName === H2_TAG) {
+                    hamburgerButtonChildNode.style.setProperty('visibility', VISIBILITY_HIDDEN);
+                }
+            });
+        }
+    });
 };
