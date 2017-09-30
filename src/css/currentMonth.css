@@ -10,4 +10,6 @@
     -webkit-transform: translate(-50%, -1%);
     -ms-transform: translate(-50%, -1%);
     transform: translate(-50%, -1%);
+
+    transition: left 0.35s linear;
 }

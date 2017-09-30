@@ -1,8 +1,7 @@
 var onLoadCalendar = function () {
     var now = new Date();
     var month = now.getMonth() + 1;
-    var year = now.getFullYear();
-    var daysInMonth = getDaysCountInMonth(year, month);
+    var daysInMonth = getDaysCountInMonth(now.getFullYear(), month);
     var squareButtonGroupElement = document.getElementById(SQUARE_BUTTON_GROUP_ID);
 
     for (var counter = 0; counter < daysInMonth; counter++) {
@@ -14,7 +13,7 @@ var onLoadCalendar = function () {
 
     var currentMonthElement = document.getElementById(CURRENT_MONTH_ID);
     var h1Node = document.createElement(H1_TAG);
-    h1Node.textContent = year + ' ' + getMonthNameByMonthNumber(month);
+    h1Node.textContent = getMonthNameByMonthNumber(month);
 
     currentMonthElement.appendChild(h1Node);
 };

@@ -16,4 +16,19 @@ var headerPointerOutEvent = function () {
             });
         }
     });
+
+    var squareButtonGroupElement = document.getElementById(SQUARE_BUTTON_GROUP_ID);
+
+    if (squareButtonGroupElement) {
+        const LEFT_STYLE_VALUE_TO_SUBTRACT = 200;
+
+        var squareButtonGroupElementStyle = squareButtonGroupElement.style;
+        var squareButtonGroupElementLeft = window.getComputedStyle(squareButtonGroupElement).getPropertyValue('left');
+        squareButtonGroupElementLeft = parseInt(squareButtonGroupElementLeft.replace('px', ''));
+
+        if (squareButtonGroupElementLeft === 300) {
+            squareButtonGroupElementStyle.setProperty('left', squareButtonGroupElementLeft - LEFT_STYLE_VALUE_TO_SUBTRACT + 'px');
+            document.getElementById(CURRENT_MONTH_ID).style.setProperty('left', '50%');
+        }
+    }
 };
