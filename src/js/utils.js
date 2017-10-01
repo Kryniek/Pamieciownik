@@ -33,3 +33,35 @@ var getMonthNameByMonthNumber = function (month) {
 
     return monthName;
 };
+
+var getMonthNumberByMonthName = function (month) {
+    var monthNumber = null;
+
+    if (month === 'Styczeń') {
+        monthNumber = 1;
+    } else if (month === 'Luty') {
+        monthNumber = 2;
+    } else if (month === 'Marzec') {
+        monthNumber = 3;
+    } else if (month === 'Kwiecień') {
+        monthNumber = 4;
+    } else if (month === 'Maj') {
+        monthNumber = 5;
+    } else if (month === 'Czerwiec') {
+        monthNumber = 6;
+    } else if (month === 'Lipiec') {
+        monthNumber = 7;
+    } else if (month === 'Sierpień') {
+        monthNumber = 8;
+    } else if (month === 'Wrzesień') {
+        monthNumber = 9;
+    } else if (month === 'Październik') {
+        monthNumber = 10;
+    } else if (month === 'Listopad') {
+        monthNumber = 11;
+    } else if (month === 'Grudzień') {
+        monthNumber = 12;
+    }
+
+    return monthNumber;
+};

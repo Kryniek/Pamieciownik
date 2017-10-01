@@ -7,7 +7,7 @@
     border-radius: 10%;
     width: 100px;
     height: 120px;
-    background-color: white;
+    background-color: rgb(33, 33, 33);
     position: relative;
     display: inline-block;
     margin: 0.5%;
@@ -19,15 +19,36 @@
     transition: transform 0.2s linear;
 }
 
-.squareButton:active{
-    border: 1px solid rgb(0, 130, 132);
-    -webkit-transform: scale(.95,.95);
-    -ms-transform: scale(.95,.95);
-    transform: scale(2,2);
+.squareButton:hover{
+    border: 2px solid rgb(0, 130, 132);
+}
+
+.squareButton > h1{
+    margin: 2px;
+    font-size: 50px;
+    color: white;
+}
+
+.squareButton > i{
+    font-size: 400%;
+    color:white;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
     transition: transform 0.2s linear;
 }
 
-.squareButton:hover{
-    border: 2px solid rgb(0, 130, 132);
+.squareButton:hover >i{
+    color:white;
+
+    -webkit-transform: translate(-50%, -50%) scale(1.05,1.05);
+    -ms-transform: translate(-50%, -50%) scale(1.05,1.05);
+    transform: translate(-50%, -50%) scale(1.05,1.05);
+
+    transition: transform 0.2s linear;
 }
