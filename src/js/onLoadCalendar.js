@@ -24,22 +24,81 @@ var onLoadCalendar = function () {
     var users = usersJson().users;
 
     users.forEach(function (user) {
+        var updateCalendarDayElementOnEvent = function(eventdate, eventType){
+            var BIRTHDAY_EVENT_CLASS = 'fa-birthday-cake';
+            var NAME_DAY_EVENT_CLASS = 'fa-gift';
+            
+            var isBirthDayEvent = null;
+            
+            if(eventType === 'BIRTHDAY'){
+                isBirthDayEvent = true;
+            } else if(eventType === 'NAME_DAY'){
+                isBirthDayEvent = false;
+            }
+            
+            var eventDay = eventdate.getDate();
+            var squareButtonElement = Array.from(squareButtonGroupElement.children)[eventDay - 1];
+            var squareButtonElementStyle = squareButtonElement.style;
+            squareButtonElementStyle.setProperty('background-color', 'rgb(0, 130, 132)');
+            squareButtonElementStyle.setProperty('border', '2px solid rgb(0, 130, 132)');
+            
+            var squareButtonSpanNode = document.createElement(SPAN_TAG);
+            var squareButtonH1Node = document.createElement(I_TAG);
+            var squareButtonH1NodeClassList = squareButtonH1Node.classList;
+            
+            squareButtonSpanNode.appendChild(squareButtonH1Node);
+            
+            squareButtonH1NodeClassList.add('fa');
+            
+            if(isBirthDayEvent){
+                squareButtonH1NodeClassList.add(BIRTHDAY_EVENT_CLASS);
+            } else if(isBirthDayEvent === false){
+                squareButtonH1NodeClassList.add(NAME_DAY_EVENT_CLASS);
+            }
+            
+            var spanNodeExists = false;
+            
+            Array.from(squareButtonElement.children).forEach(function(child){
+               if(child.tagName === SPAN_TAG){
+                   spanNodeExists = true;
+                   
+                   var allowToAppendChild = true;
+                   
+                   Array.from(child.children).forEach(function(secondDepthChild){
+                       if(secondDepthChild.tagName === I_TAG){
+                           Array.from(secondDepthChild.classList).forEach(function(thirdDepthChild){
+                               if(isBirthDayEvent && thirdDepthChild === BIRTHDAY_EVENT_CLASS){
+                                    allowToAppendChild = false;
+                                } else if(isBirthDayEvent === false && thirdDepthChild === NAME_DAY_EVENT_CLASS){
+                                    allowToAppendChild = false;
+                                }
+                           });
+                       }
+                   });
+                   
+                   if(allowToAppendChild){
+                       child.appendChild(squareButtonH1Node);   
+                   }
+               }
+            });
+            
+            if(!spanNodeExists){
+                squareButtonElement.appendChild(squareButtonSpanNode);   
+            }
+        };
+        
         var bornDate = new Date(user.born);
         var bornMonth = bornDate.getMonth() + 1;
 
         if (bornMonth === month) {
-            var bornDay = bornDate.getDate();
-            var squareButtonElement = Array.from(squareButtonGroupElement.children)[bornDay - 1];
-            var squareButtonElementStyle = squareButtonElement.style;
-            squareButtonElementStyle.setProperty('background-color', 'rgb(0, 130, 132)');
-            squareButtonElementStyle.setProperty('border', '2px solid rgb(0, 130, 132)');
-
-            var squareButtonH1Node = document.createElement(I_TAG);
-            var squareButtonH1NodeClassList = squareButtonH1Node.classList;
-            squareButtonH1NodeClassList.add('fa');
-            squareButtonH1NodeClassList.add('fa-birthday-cake');
-
-            squareButtonElement.appendChild(squareButtonH1Node);
+            updateCalendarDayElementOnEvent(bornDate, 'BIRTHDAY');
         }
-    });
+        
+        var nameDate = new Date(user.nameDate);
+        var nameMonth = nameDate.getMonth() + 1;
+        
+        if(nameMonth === month){
+            updateCalendarDayElementOnEvent(nameDate, 'NAME_DAY');
+        }
+    });    
 };

@@ -2,7 +2,7 @@
     window.onload = onLoadCalendar();
     Array.from(document.getElementsByClassName(SQUARE_BUTTON_CLASS)).forEach(function (squareButton) {
         Array.from(squareButton.children).forEach(function (child) {
-            if (child.tagName === I_TAG) {
+            if (child.tagName === SPAN_TAG) {
                 squareButton.addEventListener(CLICK_EVENT, squareButtonClickEvent);
             }
         });

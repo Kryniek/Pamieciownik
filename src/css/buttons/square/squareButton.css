@@ -29,21 +29,23 @@
     color: white;
 }
 
-.squareButton > i{
-    font-size: 400%;
-    color:white;
+.squareButton > span {
     position: absolute;
-    left: 50%;
-    top: 70%;
+    left: 70%;
 
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-
     transition: transform 0.2s linear;
 }
 
-.squareButton:hover >i{
+.squareButton > span > i{
+    font-size: 300%;
+    color:white;
+    position: relative;
+}
+
+.squareButton:hover > span {
     color:white;
 
     -webkit-transform: translate(-50%, -50%) scale(1.05,1.05);
