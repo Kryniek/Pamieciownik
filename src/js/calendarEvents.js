@@ -1,11 +1,6 @@
 (function () {
     window.onload = onLoadCalendar();
-    Array.from(document.getElementsByClassName(SQUARE_BUTTON_CLASS)).forEach(function (squareButton) {
-        Array.from(squareButton.children).forEach(function (child) {
-            if (child.tagName === SPAN_TAG) {
-                squareButton.addEventListener(CLICK_EVENT, squareButtonClickEvent);
-            }
-        });
-    });
     document.getElementById(RIGHT_PANEL_BACK_BUTTON_ID).addEventListener(CLICK_EVENT, rightPanelBackButtonClickEvent);
+    document.getElementById(PREVIOUS_MONTH_BUTTON_ID).addEventListener(CLICK_EVENT, previousButtonClickEvent);
+    document.getElementById(NEXT_MONTH_BUTTON_ID).addEventListener(CLICK_EVENT, nextBackButtonClickEvent);
 })();
