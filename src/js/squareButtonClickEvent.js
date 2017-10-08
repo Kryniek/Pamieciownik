@@ -26,7 +26,7 @@ var squareButtonClickEvent = function () {
     });
 
     rightPanelStyle.setProperty('transition', 'width 0.3s linear');
-    rightPanelStyle.setProperty('width', '40%');
+    rightPanelStyle.setProperty('width', '50%');
 
     var users = usersJson().users;
     var requestedDayBirthdayUsers = [];
