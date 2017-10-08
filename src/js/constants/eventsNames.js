@@ -1,2 +1,2 @@
 const CLICK_EVENT = 'click';
-const POINTER_OUT_EVENT = 'pointerout';
+const MOUSE_LEAVE_EVENT = 'mouseleave';
