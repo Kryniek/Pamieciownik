@@ -186,6 +186,12 @@ var usersJson = function () {
             born: '1971-10-15',
             nameDate: '1971-11-22',
             imgSrc: 'mm1971.JPG'
+        }, {
+            name: 'Jadwiga',
+            surname: 'Szatkiewicz',
+            born: '1943-12-26',
+            nameDate: '1943-10-15',
+            imgSrc: ''
         }]
     };
 };
