@@ -195,8 +195,8 @@ var usersJson = function () {
         }, {
             name: 'Sławek',
             surname: 'Szatkiewicz',
-            born: '',
-            nameDate: '2000-11-05',
+            born: '1975-07-29',
+            nameDate: '1975-11-05',
             imgSrc: ''
         }]
     };

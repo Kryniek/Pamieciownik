@@ -2,6 +2,7 @@ var onLoadCalendar = function (requestedMonth) {
     var now = new Date();
     var month = (!requestedMonth) ? now.getMonth() + 1 : requestedMonth;
     var daysInMonth = getDaysCountInMonth(now.getFullYear(), month);
+    var today = now.getDate();
     var squareButtonGroupElement = document.getElementById(SQUARE_BUTTON_GROUP_ID);
 
     Array.from(squareButtonGroupElement.children).forEach(function (child) {
@@ -11,6 +12,10 @@ var onLoadCalendar = function (requestedMonth) {
     for (var counter = 0; counter < daysInMonth; counter++) {
         var squareButtonNode = document.createElement(DIV_TAG);
         squareButtonNode.classList.add(SQUARE_BUTTON_CLASS);
+
+        if (now.getMonth() + 1 === month && counter + 1 === today) {
+            squareButtonNode.classList.add(TODAY_BUTTON_CLASS);
+        }
 
         var currentDayH1Node = document.createElement(H1_TAG);
         currentDayH1Node.textContent = counter + 1;
