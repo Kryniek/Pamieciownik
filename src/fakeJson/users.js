@@ -198,6 +198,18 @@ var usersJson = function () {
             born: '1975-07-29',
             nameDate: '1975-11-05',
             imgSrc: ''
+        }, {
+            name: 'Aneta',
+            surname: 'Jurkiewicz',
+            born: '1978-12-23',
+            nameDate: '',
+            imgSrc: ''
+        }, {
+            name: 'Bianka',
+            surname: 'Szatkiewicz',
+            born: '2012-09-04',
+            nameDate: '',
+            imgSrc: ''
         }]
     };
 };
