@@ -1,6 +1,23 @@
+@media only screen and (min-width: 0px){
+    #squareButtonGroup{
+        top: 60px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    #squareButtonGroup{
+        top: 100px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    #squareButtonGroup{
+        top: 150px;
+    }
+}
+
 #squareButtonGroup{
     position: absolute;
-    top: 100px;
     left: 100px;
 
     transition: left 0.35s linear;
