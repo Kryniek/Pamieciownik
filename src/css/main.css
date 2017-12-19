@@ -21,11 +21,3 @@ header{
 h1,h2{
     font-family:"ComfortaaRegularFont";
 }
-
-.todayButton{
-    border: 2px solid rgb(244, 182, 66) !important;
-}
-
-.todayButton > h1 {
-    color: rgb(244, 182, 66) !important;
-}
