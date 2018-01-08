@@ -65,3 +65,20 @@ var getMonthNumberByMonthName = function (month) {
 
     return monthNumber;
 };
+
+var getFontAwesomeTagByClassAndHref = function (fontAwesomeClass, fontAwesomeHref) {
+    const DEFAULT_I_TAG_CLASS = 'fa';
+    const ARIA_HIDDEN_ATTRIBUTE = 'aria-hidden';
+
+    var aNode = document.createElement(A_TAG);
+    aNode.href = fontAwesomeHref;
+
+    var iNode = document.createElement(I_TAG);
+    iNode.classList.add(DEFAULT_I_TAG_CLASS);
+    iNode.classList.add(fontAwesomeClass);
+    iNode.setAttribute(ARIA_HIDDEN_ATTRIBUTE, true);
+
+    aNode.appendChild(iNode);
+
+    return aNode;
+};

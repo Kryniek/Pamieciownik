@@ -4,3 +4,4 @@ const DIV_TAG = 'DIV';
 const I_TAG = 'I';
 const SPAN_TAG = 'SPAN';
 const IMG_TAG = 'IMG';
+const A_TAG = 'A';
