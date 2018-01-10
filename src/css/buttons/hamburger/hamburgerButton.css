@@ -20,11 +20,6 @@
 
 .hamburgerButton:hover{
     border: 2px solid rgb(0, 130, 132);
-    -webkit-transform: scale(.98,.98);
-    -ms-transform: scale(.98,.98);
-    transform: scale(.98,.98);
-
-    transition: transform 0.2s linear;
 }
 
 .hamburgerButton > a >i{
@@ -44,9 +39,9 @@
 .hamburgerButton:hover > a >i{
     color:rgb(0, 130, 132);
 
-    -webkit-transform: translate(-50%, -50%) scale(1.05,1.05);
-    -ms-transform: translate(-50%, -50%) scale(1.05,1.05);
-    transform: translate(-50%, -50%) scale(1.05,1.05);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
     transition: transform 0.2s linear;
 }

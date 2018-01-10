@@ -41,8 +41,8 @@
 @media only screen and (min-width: 1400px){
     .roundButton{
         border: 4px solid white;
-        width: 340px;
-        height: 340px;
+        width: 280px;
+        height: 280px;
 
         -webkit-box-shadow: 0px 0px 25px -2px rgba(255,255,255,0.78);
         -moz-box-shadow: 0px 0px 25px -2px rgba(255,255,255,0.78);
@@ -54,7 +54,7 @@
     }
 
     .roundButton > a >i{
-        font-size: 1300%;
+        font-size: 1100%;
     }
 }
 
