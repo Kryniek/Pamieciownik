@@ -1,4 +1,4 @@
-var nextBackButtonClickEvent = function () {
+var nextButtonClickEvent = function () {
     var requestedMonth = null;
     var currentMonthElement = document.getElementById(CURRENT_MONTH_ID);
 

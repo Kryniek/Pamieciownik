@@ -1,0 +1,138 @@
+@-moz-keyframes bodyBackgroundImgOpacity{
+    0%{
+        opacity : 0;
+    }
+    10%{
+        opacity : 0.02;
+    }
+    20%{
+        opacity : 0.04;
+    }
+    30%{
+        opacity : 0.06;
+    }
+    40%{
+        opacity : 0.08;
+    }
+    50%{
+        opacity : 0.1;
+    }
+    60%{
+        opacity : 0.12;
+    }
+    70%{
+        opacity : 0.14;
+    }
+    80%{
+        opacity : 0.16;
+    }
+    90%{
+        opacity : 0.18;
+    }
+    100%{
+        opacity : 0.2;
+    }
+}
+
+@-webkit-keyframes bodyBackgroundImgOpacity{
+    0%{
+        opacity : 0;
+    }
+    10%{
+        opacity : 0.02;
+    }
+    20%{
+        opacity : 0.04;
+    }
+    30%{
+        opacity : 0.06;
+    }
+    40%{
+        opacity : 0.08;
+    }
+    50%{
+        opacity : 0.1;
+    }
+    60%{
+        opacity : 0.12;
+    }
+    70%{
+        opacity : 0.14;
+    }
+    80%{
+        opacity : 0.16;
+    }
+    90%{
+        opacity : 0.18;
+    }
+    100%{
+        opacity : 0.2;
+    }
+}
+
+@keyframes bodyBackgroundImgOpacity{
+    0%{
+        opacity : 0;
+    }
+    10%{
+        opacity : 0.02;
+    }
+    20%{
+        opacity : 0.04;
+    }
+    30%{
+        opacity : 0.06;
+    }
+    40%{
+        opacity : 0.08;
+    }
+    50%{
+        opacity : 0.1;
+    }
+    60%{
+        opacity : 0.12;
+    }
+    70%{
+        opacity : 0.14;
+    }
+    80%{
+        opacity : 0.16;
+    }
+    90%{
+        opacity : 0.18;
+    }
+    100%{
+        opacity : 0.2;
+    }
+}
+
+body{
+    background-color: rgb(33, 33, 33);
+    margin: auto;
+}
+
+body::after{
+    background-image: url("../img/background.jpg");
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 100%;
+    opacity : 0.2;
+    z-index: -1;
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-animation-name: bodyBackgroundImgOpacity;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-iteration-count: inherit;
+
+    -moz-animation-name: bodyBackgroundImgOpacity;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-iteration-count: inherit;
+
+    animation-name: bodyBackgroundImgOpacity;
+    animation-duration: 0.5s;
+    animation-iteration-count: inherit;
+}

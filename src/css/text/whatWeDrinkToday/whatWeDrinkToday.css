@@ -1,0 +1,79 @@
+@media only screen and (min-width: 0px){
+    #whatWeDrinkToday{
+        left: 50%;
+
+        -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
+    }
+    #whatWeDrinkToday > h1{
+        font-size: 300%;
+        top: 1%;
+    }
+    #whatWeDrinkToday > p{
+        visibility: hidden;
+    }
+}
+
+@media only screen and (min-width: 1100px){
+    #whatWeDrinkToday{
+        left: 25%;
+
+        -webkit-transform: translate(-25%, 0%);
+        -ms-transform: translate(-25%, 0%);
+        transform: translate(-25%, 0%);
+    }
+    #whatWeDrinkToday > h1{
+        font-size: 400%;
+        top: 10%;
+    }
+    #whatWeDrinkToday > p{
+        visibility: visible;
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    #whatWeDrinkToday{
+        left: 25%;
+
+        -webkit-transform: translate(-25%, 0%);
+        -ms-transform: translate(-25%, 0%);
+        transform: translate(-25%, 0%);
+    }
+    #whatWeDrinkToday > h1{
+        font-size: 400%;
+        top: 10%;
+    }
+    #whatWeDrinkToday > p{
+        visibility: visible;
+    }
+}
+
+#whatWeDrinkToday{
+    position: fixed;
+    color:rgb(0, 130, 132);
+    height: 100%;
+    width: 50%;
+}
+
+#whatWeDrinkToday > h1{
+    text-shadow: 0px 2px 3px white;
+    position: absolute;
+}
+
+#whatWeDrinkToday > p{
+    text-shadow: 0px 2px 3px black;
+    position: relative;
+    z-index: -1;
+    font-size: 200%;
+}
+
+#whatWeDrinkToday > p:first-child{
+    top: 4%;
+    left: 10%;
+}
+
+#whatWeDrinkToday > p:last-child{
+    top: 15%;
+    left: 25%;
+}
