@@ -15,7 +15,13 @@
     width: 100%;
     position: fixed;
     margin: 1%;
-    overflow-x: auto;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+#rightPanel > span::-webkit-scrollbar {
+    width: 0 !important;
 }
 
 #rightPanel > span > span {
@@ -47,6 +53,7 @@
     margin-left: 1%;
     font-size: 1200%;
 }
+
 #rightPanel > span > span > img {
     margin-left: 1%;
     width: 290px;
