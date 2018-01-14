@@ -1,0 +1,88 @@
+@media only screen and (min-width: 0px){
+    #whatWeDrinkTodayButton{
+        left: 50%;
+        top: 20%;
+
+        -webkit-transform: translate(-50%, -20%);
+        -ms-transform: translate(-50%, -20%);
+        transform: translate(-50%, -20%);
+    }
+
+    #whatWeDrinkTodayButton > a {
+        font-size: 80%;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    #whatWeDrinkTodayButton{
+        left: 50%;
+        top: 30%;
+
+        -webkit-transform: translate(-50%, -30%);
+        -ms-transform: translate(-50%, -30%);
+        transform: translate(-50%, -30%);
+    }
+
+    #whatWeDrinkTodayButton > a {
+        font-size: 115%;
+    }
+}
+
+@media only screen and (min-width: 1100px){
+    #whatWeDrinkTodayButton{
+        left: 25%;
+        top: 50%;
+
+        -webkit-transform: translate(-25%, -50%);
+        -ms-transform: translate(-25%, -50%);
+        transform: translate(-25%, -50%);
+    }
+
+    #whatWeDrinkTodayButton > a {
+        font-size: 150%;
+    }
+}
+
+#whatWeDrinkTodayButton{
+    position: fixed;
+
+    transition: left 0.3s linear, top 0.3s linear, transform 0.3s linear;
+}
+
+#whatWeDrinkTodayButton > a {
+    font-family:"ComfortaaRegularFont";
+    color:rgb(244, 182, 66);
+    background-color: rgba(33, 33, 33, 0.6);
+    border: 2px solid rgba(0, 130, 132, 0.7);
+    
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    border-radius: 20%;
+
+    padding: 20px;
+
+    -webkit-box-shadow: 0px 0px 20px black;
+    -moz-box-shadow: 0px 0px 20px black;
+    box-shadow: 0px 0px 20px black;
+
+    transition: background-color 0.3s linear, text-shadow 0.3s linear, box-shadow 0.3s linear;
+}
+
+#whatWeDrinkTodayButton > a:hover {
+    background-color: rgba(33, 33, 33, 0.9);
+    text-shadow: 0px 0px 0.5px white;
+
+    -webkit-box-shadow: 0px 0px 20px white;
+    -moz-box-shadow: 0px 0px 20px white;
+    box-shadow: 0px 0px 20px white;
+}
+
+#whatWeDrinkTodayButton > a:active {
+    background-color: rgba(0, 130, 132, 0.6);
+    
+    text-shadow: 0px 0px 0.5px white;
+
+    -webkit-box-shadow: 0px 0px 20px black;
+    -moz-box-shadow: 0px 0px 20px black;
+    box-shadow: 0px 0px 20px black;
+}

@@ -1,10 +1,59 @@
+@media only screen and (min-width: 0px){
+    #alkohols{
+        width: 350px;
+        right: 50%;
+        top: 30%;
+        height: 70%;
+
+        -webkit-transform: translate(50%, 0%);
+        -ms-transform: translate(50%, 0%);
+        transform: translate(50%, 0%);
+    }
+}
+
+@media only screen and (min-width: 800px){
+    #alkohols{
+        width: 350px;
+        right: 50%;
+        top: 50%;
+        height: 50%;
+
+        -webkit-transform: translate(50%, 0%);
+        -ms-transform: translate(50%, 0%);
+        transform: translate(50%, 0%);
+    }
+}
+
+@media only screen and (min-width: 1100px){
+    #alkohols{
+        width: 350px;
+        right: 4%;
+        top: 2%;
+        height: 96%;
+
+        -webkit-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+}
+
+@media only screen and (min-width: 1570px){
+    #alkohols{
+        width: 750px;
+        right: 4%;
+        top: 2%;
+        height: 96%;
+
+        -webkit-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+}
+
 #alkohols{
-    background-color: rgba(33, 33, 33, 0.5);
-    right: 4%;
-    top: 2%;
-    height: 96%;
-    width: 350px;
     position: fixed;
+
+    transition: width 0.3s linear, right 0.3s linear, top 0.3s linear, height 0.3s linear, transform 0.3s linear;
 }
 
 #alkohols > span {

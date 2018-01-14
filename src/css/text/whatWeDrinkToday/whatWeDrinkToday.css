@@ -7,6 +7,23 @@
         transform: translate(-50%, 0%);
     }
     #whatWeDrinkToday > h1{
+        font-size: 200%;
+        top: 1%;
+    }
+    #whatWeDrinkToday > p{
+        visibility: hidden;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    #whatWeDrinkToday{
+        left: 50%;
+
+        -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
+    }
+    #whatWeDrinkToday > h1{
         font-size: 300%;
         top: 1%;
     }
@@ -54,11 +71,15 @@
     color:rgb(0, 130, 132);
     height: 100%;
     width: 50%;
+
+    transition: left 0.3s linear, transform 0.3s linear;
 }
 
 #whatWeDrinkToday > h1{
     text-shadow: 0px 2px 3px white;
     position: absolute;
+
+    transition: font-size 0.3s linear, top 0.3s linear;
 }
 
 #whatWeDrinkToday > p{
@@ -66,14 +87,17 @@
     position: relative;
     z-index: -1;
     font-size: 200%;
+    font-family:"ComfortaaRegularFont";
+
+    transition: visibility 0.2s linear;
 }
 
 #whatWeDrinkToday > p:first-child{
     top: 4%;
-    left: 10%;
+    left: 5%;
 }
 
 #whatWeDrinkToday > p:last-child{
     top: 15%;
-    left: 25%;
+    left: 15%;
 }
