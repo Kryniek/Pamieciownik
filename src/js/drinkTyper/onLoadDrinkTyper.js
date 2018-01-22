@@ -1,5 +1,5 @@
 var onLoadDrinkTyper = function () {
     (function onLoadDrinkTyper() {
-        console.log("welcome");
+        console.log('tes');
     })();
 };

@@ -1,0 +1,196 @@
+@media only screen and (min-width: 0px){
+    #showAlkoholsButton{
+        width: 350px;
+        right: 50%;
+        top: 30%;
+        height: 220px;
+
+        -webkit-transform: translate(50%, 0%);
+        -ms-transform: translate(50%, 0%);
+        transform: translate(50%, 0%);
+    }
+
+    #showAlkoholsButton > a {
+        font-size: 80%;
+    }
+
+    #showAlkoholsButton > h1 {
+        font-size: 170%;
+        top: 5px;
+        left: 31%;
+    }
+
+    #showAlkoholsButton > #lastTimeChosenAlkoholsButton{
+        top: 30px;
+        left: 25%;
+    }
+
+    #showAlkoholsButton > #allAlkoholsButton{
+        top: 100px;
+        left: -13%;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    #showAlkoholsButton{
+        width: 350px;
+        right: 50%;
+        top: 50%;
+        height: 250px;
+
+        -webkit-transform: translate(50%, 0%);
+        -ms-transform: translate(50%, 0%);
+        transform: translate(50%, 0%);
+    }
+
+    #showAlkoholsButton > a {
+        font-size: 115%;
+    }
+
+    #showAlkoholsButton > h1 {
+        font-size: 210%;
+        top: 5px;
+        left: 26%;
+    }
+
+    #showAlkoholsButton > #lastTimeChosenAlkoholsButton{
+        top: 30px;
+        left: 18%;
+    }
+
+    #showAlkoholsButton > #allAlkoholsButton{
+        top: 85px;
+        left: 30%;
+    }
+}
+
+@media only screen and (min-width: 1100px){
+    #showAlkoholsButton{
+        width: 350px;
+        right: 4%;
+        top: 25%;
+        height: 300px;
+
+        -webkit-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+
+    #showAlkoholsButton > a {
+        font-size: 150%;
+    }
+
+    #showAlkoholsButton > h1 {
+        font-size: 250%;
+        top: 10px;
+        left: 25%;
+    }
+
+    #showAlkoholsButton > #lastTimeChosenAlkoholsButton{
+        top: 50px;
+        left: 13%;
+    }
+
+    #showAlkoholsButton > #allAlkoholsButton{
+        top: 110px;
+        left: 29%;
+    }
+}
+
+@media only screen and (min-width: 1570px){
+    #showAlkoholsButton{
+        width: 750px;
+        right: 4%;
+        top: 25%;
+        height: 450px;
+
+        -webkit-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+
+    #showAlkoholsButton > a {
+        font-size: 150%;
+    }
+
+    #showAlkoholsButton > h1 {
+        font-size: 400%;
+        top: 15px;
+        left: 30%;
+    }
+
+    #showAlkoholsButton > #lastTimeChosenAlkoholsButton{
+        top: 50px;
+        left: 30%;
+    }
+
+    #showAlkoholsButton > #allAlkoholsButton{
+        top: 150px;
+        left: 2%;
+    }
+}
+
+#showAlkoholsButton {
+    position: fixed;
+    z-index:1;
+
+    background-color: rgba(33, 33, 33, 0.5);
+
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    border-radius: 20%;
+
+    -webkit-box-shadow: 0px 0px 20px black;
+    -moz-box-shadow: 0px 0px 20px black;
+    box-shadow: 0px 0px 20px black;
+
+    transition: width 0.3s linear, right 0.3s linear, top 0.3s linear, height 0.3s linear, transform 0.3s linear;
+}
+
+#showAlkoholsButton > a {
+    font-family:"ComfortaaRegularFont";
+    color:rgb(244, 182, 66);
+    background-color: rgba(33, 33, 33, 0.6);
+    border: 2px solid rgba(0, 130, 132, 0.7);
+    
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    border-radius: 20%;
+
+    padding: 20px;
+    position: relative;
+
+    -webkit-box-shadow: 0px 0px 20px black;
+    -moz-box-shadow: 0px 0px 20px black;
+    box-shadow: 0px 0px 20px black;
+
+    transition: background-color 0.3s linear, text-shadow 0.3s linear, box-shadow 0.3s linear, top 0.3s linear, left 0.3s linear;
+}
+
+#showAlkoholsButton > h1 {
+    position: relative;
+
+    color:rgb(0, 130, 132);
+    text-shadow: 0px 2px 1px white;
+
+    transition: font-size 0.3s linear, left 0.3s linear, top 0.3s linear;
+}
+
+#showAlkoholsButton > a:hover {
+    background-color: rgba(33, 33, 33, 0.9);
+    text-shadow: 0px 0px 0.5px white;
+
+    -webkit-box-shadow: 0px 0px 20px white;
+    -moz-box-shadow: 0px 0px 20px white;
+    box-shadow: 0px 0px 20px white;
+}
+
+#showAlkoholsButton > a:active {
+    background-color: rgba(0, 130, 132, 0.6);
+    
+    text-shadow: 0px 0px 0.5px white;
+
+    -webkit-box-shadow: 0px 0px 20px black;
+    -moz-box-shadow: 0px 0px 20px black;
+    box-shadow: 0px 0px 20px black;
+}
