@@ -9,6 +9,10 @@
         -ms-transform: translate(50%, 0%);
         transform: translate(50%, 0%);
     }
+
+    #alkohols > span > span :first-child {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 800px){
@@ -21,6 +25,10 @@
         -webkit-transform: translate(50%, 0%);
         -ms-transform: translate(50%, 0%);
         transform: translate(50%, 0%);
+    }
+
+    #alkohols > span > span :first-child {
+        display: none;
     }
 }
 
@@ -35,6 +43,10 @@
         -ms-transform: translate(0%, 0%);
         transform: translate(0%, 0%);
     }
+
+    #alkohols > span > span :first-child {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 1570px){
@@ -47,6 +59,10 @@
         -webkit-transform: translate(0%, 0%);
         -ms-transform: translate(0%, 0%);
         transform: translate(0%, 0%);
+    }
+
+    #alkohols > span > span :first-child {
+        display: inline-block;
     }
 }
 
@@ -89,6 +105,10 @@
     transition: background-color 0.2s linear;
 }
 
+#alkohols > span > span > img {
+    display: inline-block;
+}
+
 #alkohols > span > span > .coverImage {
     position: absolute;
     top: 0;
@@ -119,6 +139,7 @@
     transform: translate(-50%, -50%);
 
     text-align: center;
+    display: inline-block;
 }
 
 #alkohols > span > span > img {
