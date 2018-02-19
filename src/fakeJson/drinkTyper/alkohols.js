@@ -5,7 +5,10 @@ var alhohols = function () {
         description: 'Absynt to wysokoprocentowy napój alkoholowy, który otrzymywany jest w procesie destylacji ziół z kwiatów i liści piołunu (Artemisia absinthium) oraz anyżu, z dodatkiem kopru włoskiego, hyzopu. Trunek ten został wynaleziony w 1792 roku przez Pierre’a Ordinaire, francuskiego lekarza, który destylował piołun i inne zioła w zasadzie alkoholowej aby otrzymać lek dla swoich pacjentów.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Absynt1.jpg'
+        }, {
+            id: 2,
+            src: 'Absynt2.jpg'
         }]
     }, {
         id: 2,
@@ -13,7 +16,10 @@ var alhohols = function () {
         description: 'Arak (z arabskiego „słodki sok”) to bezbarwny i niesłodzony bliskowschodni trunek zaliczany do grupy destylatów roślinnych i korzennych, który powiązany jest z wieloma podobnymi alkoholami produkowanymi w krajach wokół basenu Morza Śródziemnego. Typowy Arak głównie wytwarzany jest w Jordanii, Iraku, Libanie, Iranie i Syrii.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Arak1.jpg'
+        }, {
+            id: 2,
+            src: 'Arak2.jpg'
         }]
     }, {
         id: 3,
@@ -21,7 +27,10 @@ var alhohols = function () {
         description: 'Armagnac destylowany najstarszy francuski i europejski napój alkoholowy produkowany z białych winogron pochodzących z regionu Armaniak (winiak). Trunek wywodzi się z regionu Armagnac w Gaskonii (pd-zach Francja).',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Armagnac1.jpg'
+        }, {
+            id: 2,
+            src: 'Armagnac2.jpg'
         }]
     }, {
         id: 4,
@@ -29,7 +38,10 @@ var alhohols = function () {
         description: 'Nie trzeba go tłumaczyć. Kto raz posmakował ten wie.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Bimber1.jpg'
+        }, {
+            id: 2,
+            src: 'Bimber2.jpg'
         }]
     }, {
         id: 5,
@@ -37,7 +49,10 @@ var alhohols = function () {
         description: 'Brandy (pol. wypalanka, winiak) to wysokoprocentowy napój alkoholowy powstały z przekształcania wina gronowego, owocowego lub wytłoków powstałych przy wyciskaniu owoców w bardziej skoncentrowany, czystszy alkohol.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Brandy1.jpg'
+        }, {
+            id: 2,
+            src: 'Brandy2.jpg'
         }]
     }, {
         id: 6,
@@ -45,7 +60,10 @@ var alhohols = function () {
         description: 'Burbon to amerykańska whiskey produkowana z kukurydzy i innych zbóż (żyto, słodowany jęczmień). Zawartość kukurydzy wynosi min. 51% (najczęściej ok. 70%). Burbon leżakuje w świeżych beczkach dębowych, co nadaje mu charakterystyczny smak. Produkowany jest od XVIII wieku. Zawiera 40-70% alkoholu.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Burbon1.jpg'
+        }, {
+            id: 2,
+            src: 'Burbon2.jpg'
         }]
     }, {
         id: 7,
@@ -53,7 +71,10 @@ var alhohols = function () {
         description: 'Cachaça to bardzo popularny w Brazylii destylowany napój alkoholowy produkowany z fermentowanego soku trzcinowego (nie melasy), do którego dozwolony jest dodatek cukru w ilości nie większej niż 6g/l . To narodowa wódka Brazylii, która zajmuje pierwsze miejsce na czele wraz z sambą i piłką nożną. ',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Cachaça1.jpg'
+        }, {
+            id: 2,
+            src: 'Cachaça2.jpg'
         }]
     }, {
         id: 8,
@@ -61,7 +82,10 @@ var alhohols = function () {
         description: 'Calvados to napój alkoholowy otrzymywany z cydru czyli przefermentowanego moszczu jabłkowego pochodzącego z Dolnej Normandii we Francji. Legenda powstania trunku głosi iż pierwszą destylację moszczu jabłkowego w swoim gospodarstwie w Mensil-au-Val rozpoczął pewien agronom de Gouberville w 1554 roku. ',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Calvados1.jpg'
+        }, {
+            id: 2,
+            src: 'Calvados2.jpg'
         }]
     }, {
         id: 9,
@@ -69,7 +93,10 @@ var alhohols = function () {
         description: 'Cydr to inaczej jabłecznik napój alkoholowy, przefermentowany sok z dojrzałych jabłek o wyglądzie od mętnego po klarowny, o zawartości alkoholu 2-7%. Cydr odznacza się świeżym aromatem i lekko słodkawym, kwaskowo-orzeźwiającym smakiem jabłek, dobrze gasi pragnienie. Wytwarzany przez fermentację moszczu jabłecznego w sposób zbliżony do produkcji piwa techniką górnej fermentacji.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Cydr1.jpg'
+        }, {
+            id: 2,
+            src: 'Cydr2.jpg'
         }]
     }, {
         id: 10,
@@ -77,7 +104,10 @@ var alhohols = function () {
         description: 'Drinki znane były już za czasów rewolucji przemysłowej, jednak już w czasach starożytnych, Rzymianie i Grecy  mieli zwyczaj dodawania do wina przypraw lub aromatów co miało zwiększyć lub zmniejszyć moc napojów. Podawano je podczas posiłków lub jako aperitif –  tego typu mieszanki można uznać za praprzodków naszych współczesnych drinków.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Drinki1.jpg'
+        }, {
+            id: 2,
+            src: 'Drinki2.jpg'
         }]
     }, {
         id: 11,
@@ -85,7 +115,10 @@ var alhohols = function () {
         description: 'Gin to trunek o wysokiej zawartości alkoholu, który powstaje najczęściej z pszenicy lub żyta z jagodami jałowca a także owocami cytrusowymi. Posiada bezbarwny klarowany kolor. Gin powstał w XVII w. w Holandii a za jego wynalazcę uważa się fizyka Franciscus Sylviusa.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Gin1.jpg'
+        }, {
+            id: 2,
+            src: 'Gin2.jpg'
         }]
     }, {
         id: 12,
@@ -93,7 +126,10 @@ var alhohols = function () {
         description: 'Grappa to bezbarwny lub mający lekko miodowy kolor włoski trunek alkoholowy, który otrzymywany jest przez destylację wytłoczyn, pestek i gałązek z winogron pozostałych po produkcji wina. Posiada mocny smak, przypominający koniak.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Grappa1.jpg'
+        }, {
+            id: 2,
+            src: 'Grappa2.jpg'
         }]
     }, {
         id: 13,
@@ -101,7 +137,10 @@ var alhohols = function () {
         description: 'Koniak to destylat wina wyprodukowanego na obszarze miasta Cognac we Francji. Jest to miejscowość, której gospodarka i całe życie skupia się wokół bursztynowego trunku. Zawiera ok. 40-45% alkoholu. Koniak musi powstać przynajmniej w 90% z następujących gatunków winogron: Ugni Blanc, Folle Blanche lub Colombard. Większość koniaków wytwarza się tylko z Ugni Blanc.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Koniak1.jpg'
+        }, {
+            id: 2,
+            src: 'Koniak2.jpg'
         }]
     }, {
         id: 14,
@@ -109,7 +148,10 @@ var alhohols = function () {
         description: 'Likier to wysokoprocentowy, spirytusowy, gęsty napój alkoholowy o słodkim owocowym, korzennym lub korzenno-ziołowym smaku, otrzymywany przez aromatyzowanie spirytusu w różnych stężeniach. Nazwa likier pochodzi z łacińskiego słowa liquefacere, która oznacza rozpuszczać, mieszać.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Likier1.jpg'
+        }, {
+            id: 2,
+            src: 'Likier2.jpg'
         }]
     }, {
         id: 15,
@@ -117,7 +159,10 @@ var alhohols = function () {
         description: 'Miód pitny to tradycyjny aromatyczny napój alkoholowy, powstały w wyniku fermentacji brzeczki lipowego miodu pszczelego. Uważany jest za najstarszy napój alkoholowy Europy środkowej i północnej.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'MiódPitny1.jpg'
+        }, {
+            id: 2,
+            src: 'MiódPitny2.jpg'
         }]
     }, {
         id: 16,
@@ -125,7 +170,10 @@ var alhohols = function () {
         description: 'Nalewka to alkoholowy wyciąg z owoców, korzeni, kwiatów lub ziół, zazwyczaj o 40-45% zawartości alkoholu. Nalewki sporządzane są w procesie maceracji, czyli przez zalanie składników alkoholem. Mogą być słodzone syropem. Często spotykane w sklepach alkohole o nazwie nalewka tak naprawdę z prawdziwymi nalewkami wspólną mają jedynie nazwę. ',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Nalewka1.jpg'
+        }, {
+            id: 2,
+            src: 'Nalewka2.jpg'
         }]
     }, {
         id: 17,
@@ -133,7 +181,10 @@ var alhohols = function () {
         description: 'Ouzo to grecki anyżowy napój alkoholowy o zawartości do 48% alkoholu. Podawany zazwyczaj z wodą, po rozcieńczeniu zmienia kolor na mleczny. Ouzo jest silnie powiązane z kulturą tego kraju i dlatego Unia Europejska przyznała Grecji w 2006 roku wyłączność na produkcję tego trunku. Charakter tego alkoholu, podkreśla fakt, iż wszystkie składniki użyte do jego produkcji muszą pochodzić z tego państwa.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Ouzo1.jpg'
+        }, {
+            id: 2,
+            src: 'Ouzo2.jpg'
         }]
     }, {
         id: 18,
@@ -141,7 +192,10 @@ var alhohols = function () {
         description: 'Piwo to najstarszy i najczęściej spożywany chmielowy napój alkoholowy na świecie. Powstaje w wyniku fermentacji wodnego wyciągu ze słodu jęczmiennego przy użyciu drożdży. Nazwa tego złocistego trunku pochodzi z prasłowiańskiego słowa pivo oznaczającego napitek lub napój.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Piwo1.jpg'
+        }, {
+            id: 2,
+            src: 'Piwo2.jpg'
         }]
     }, {
         id: 19,
@@ -149,7 +203,10 @@ var alhohols = function () {
         description: 'Rum to wysokoprocentowy napój alkoholowy produkowany z trzciny cukrowej lub pochodnej jej melasy. Po destylacji poddaje się go leżakowaniu w beczkach dębowych, ale także beczkach z innych rodzajów drewna.  Słowo „Rum” pochodzi prawdopodobnie z niderlandzkiego/flamandzkiego słowa „roemer”, oznaczającego duży kielich używany przez holenderskich marynarzy. Pochodzi przede wszystkim z Karaibów i Ameryki Południowej. ',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Rum1.jpg'
+        }, {
+            id: 2,
+            src: 'Rum2.jpg'
         }]
     }, {
         id: 20,
@@ -157,7 +214,10 @@ var alhohols = function () {
         description: 'Sake to pochodzący z Japonii produkowany z ryżu, niedestylowany napój alkoholowy zawierający od 14% do 16% alkoholu. Pierwsze Sake nazywano kuchikami, co można rozumieć jako sake przeżuwane w ustach, ponieważ było robione przez ludzi żującą ryż, proso, kasztany, żołędzie i wypluwających miksturę do kadzi.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Sake1.jpg'
+        }, {
+            id: 2,
+            src: 'Sake2.jpg'
         }]
     }, {
         id: 21,
@@ -165,7 +225,10 @@ var alhohols = function () {
         description: 'Spirytus rektyfikowany to destylat lub wodny roztwór alkoholu etylowego o zawartości około 96% alkoholu. Alkohol etylowy tworzy z wodą mieszaninę azeotropową, jest to maksymalne stężenie, które można otrzymać przez rektyfikację spirytusu surowego.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Spirytus1.jpg'
+        }, {
+            id: 2,
+            src: 'Spirytus2.jpg'
         }]
     }, {
         id: 22,
@@ -173,7 +236,10 @@ var alhohols = function () {
         description: 'Szampan (z franc. champagne, od vin de Champagne) to szczególny rodzaj wina musującego, powszechnie kojarzony ze świętowaniem i luksusem. Nazwę swą zawdzięcza Szampanii, regionowi w północno-wschodniej Francji, głównemu miejscu jego produkcji.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Szampan1.jpg'
+        }, {
+            id: 2,
+            src: 'Szampan2.jpg'
         }]
     }, {
         id: 23,
@@ -181,7 +247,10 @@ var alhohols = function () {
         description: 'Śliwowica to wysokoprocentowy napój alkoholowy produkowany ze specjalnie dobranych śliwek węgierek w Europie środkowo-wschodniej oraz na Półwyspie Bałkańskim. Etymologia nazwy trunku związana jest ściele z jego pochodzeniem i tradycyjnie z jedynym produktem dopuszczalnym przy produkcji czyli śliwką. Ogólnie przyjęta nazwa to niemieckie tłumaczenie południowosłowiańskich wersji –Slivovitz ',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Śliwowica1.jpg'
+        }, {
+            id: 2,
+            src: 'Śliwowica2.jpg'
         }]
     }, {
         id: 24,
@@ -189,7 +258,10 @@ var alhohols = function () {
         description: 'Tequila to meksykański wysokoprocentowy napój alkoholowy, który powstaje w wyniku dwukrotnej destylacji sfermentowanego soku agawy niebieskiej (Agave tequilana azul). Nazwa tego trunku pochodzi bezpośrednio od miasta Tequila, gdzie rozpoczęła się jego produkcja. Jest to również nazwa wulkanu górującego nad tym miastem.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Tequila1.jpg'
+        }, {
+            id: 2,
+            src: 'Tequila2.jpg'
         }]
     }, {
         id: 25,
@@ -197,7 +269,10 @@ var alhohols = function () {
         description: 'Whisky to napój alkoholowy powstały w wyniku destylacji zacieru zbożowego do zawartości alkoholu niższej niż 94,8% objętościowo, który dojrzewa przez minimum 3 lata w drewnianych beczkach dębowych. ',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Whisky1.jpg'
+        }, {
+            id: 2,
+            src: 'Whisky2.jpg'
         }]
     }, {
         id: 26,
@@ -205,7 +280,10 @@ var alhohols = function () {
         description: 'Wino to napój alkoholowy uzyskiwany w wyniku procesu fermentacji moszczu z winogron. Rozgniecione winogrona fermentowane są przy udziale różnych gatunków drożdży, które zamieniają cukier nagromadzony w owocach w alkohol. Do produkcji wina wykorzystywane są grona dojrzałych winorośli z gatunku winorośli właściwej, ale także z tzw. odmian hybrydowych, które zawierają geny również innych gatunków np. winorośli lisiej.',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Wino1.jpg'
+        }, {
+            id: 2,
+            src: 'Wino2.jpg'
         }]
     }, {
         id: 27,
@@ -213,7 +291,10 @@ var alhohols = function () {
         description: 'Wódka to wysokoprocentowy napój alkoholowy składający się z destylatu alkoholowego rozcieńczonego z wodą w stosunku ok. 2:3. Powstała wraz z przybyciem destylacji do Europy i stosowano ją do celów medycznych i produkcji perfum. ',
         imgages: [{
             id: 1,
-            src: ''
+            src: 'Wódka1.jpg'
+        }, {
+            id: 2,
+            src: 'Wódka2.jpg'
         }]
     }]
 };
