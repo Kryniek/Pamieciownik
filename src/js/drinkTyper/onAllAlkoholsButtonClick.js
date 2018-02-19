@@ -29,18 +29,30 @@ var onAllAlkoholsButtonClick = function () {
     function getAlkoholElementWithSupplementedInnerTags(alkohol) {
         var spanElement = document.createElement(SPAN_TAG);
 
-        spanElement.appendChild(getNewImgElement(alkohol));
-        //TODO Usunąć jedno zdjęcie kiedy będzie zaimplementowane
-        //dodawanie dwóch zdjęć w jednej funkcji
-        spanElement.appendChild(getNewImgElement(alkohol));
+        var imgElements = getNewImgElements(alkohol);
+
+        imgElements.forEach(function (imgElement) {
+            spanElement.appendChild(imgElement);
+        });
+
         spanElement.appendChild(getNewDivElement(alkohol));
 
         return spanElement;
     };
 
-    function getNewImgElement(alkohol) {
+    function getNewImgElements(alkohol) {
+        var imgElements = [];
+
+        alkohol.images.forEach(function (image) {
+            imgElements.push(getNewImgElement(image.src));
+        });
+
+        return imgElements;
+    };
+
+    function getNewImgElement(imageSrc) {
         var imgElement = document.createElement(IMG_TAG);
-        imgElement.setAttribute('src', "../img/users/jm1992.jpg");
+        imgElement.setAttribute('src', imageSrc);
 
         return imgElement;
     };
