@@ -27,17 +27,34 @@ var onAllAlkoholsButtonClick = function () {
     };
 
     function getAlkoholElementWithSupplementedInnerTags(alkohol) {
-        var spanElement = document.createElement(SPAN_TAG);
+        var aElement = getAElement(alkohol.id);
 
         var imgElements = getNewImgElements(alkohol);
 
         imgElements.forEach(function (imgElement) {
-            spanElement.appendChild(imgElement);
+            aElement.appendChild(imgElement);
         });
 
-        spanElement.appendChild(getNewDivElement(alkohol));
+        aElement.appendChild(getNewDivElement(alkohol));
 
-        return spanElement;
+        return aElement;
+    };
+
+    function getAElement(alkoholId) {
+        let aElement = document.createElement(A_TAG);
+
+        aElement.onclick = function () {
+            let me = this;
+            let classes = me.classList;
+
+            if (classes.contains(CHOOSEN_ALKOHOL_A_CLASS)) {
+                classes.remove(CHOOSEN_ALKOHOL_A_CLASS);
+            } else {
+                classes.add(CHOOSEN_ALKOHOL_A_CLASS);
+            }
+        };
+
+        return aElement;
     };
 
     function getNewImgElements(alkohol) {

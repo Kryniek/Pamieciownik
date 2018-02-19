@@ -10,7 +10,7 @@
         transform: translate(50%, 0%);
     }
 
-    #alkohols > span > span :first-child {
+    #alkohols > span > a :first-child {
         display: none;
     }
 }
@@ -27,7 +27,7 @@
         transform: translate(50%, 0%);
     }
 
-    #alkohols > span > span :first-child {
+    #alkohols > span > a :first-child {
         display: none;
     }
 }
@@ -44,7 +44,7 @@
         transform: translate(0%, 0%);
     }
 
-    #alkohols > span > span :first-child {
+    #alkohols > span > a :first-child {
         display: none;
     }
 }
@@ -61,7 +61,7 @@
         transform: translate(0%, 0%);
     }
 
-    #alkohols > span > span :first-child {
+    #alkohols > span > a :first-child {
         display: inline-block;
     }
 }
@@ -86,7 +86,7 @@
     width: 0 !important;
 }
 
-#alkohols > span > span {
+#alkohols > span > a {
     width: 100%;
     position: relative;
     display: inline-block;
@@ -99,17 +99,17 @@
     box-shadow: 0px 0px 15px -2px black;
 }
 
-#alkohols > span > span:hover {
+#alkohols > span > a:hover {
     background-color: rgba(0,130,132,0.2);
 
     transition: background-color 0.2s linear;
 }
 
-#alkohols > span > span > img {
+#alkohols > span > a > img {
     display: inline-block;
 }
 
-#alkohols > span > span > .coverImage {
+#alkohols > span > a > .coverImage {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -125,11 +125,16 @@
     text-shadow: 0px 2px 3px black;
 }
 
-#alkohols > span > span:hover > .coverImage {
+#alkohols > span > .choosenAlkohol > .coverImage {
+    background-color: rgba(244, 182, 66, 0.5);
     opacity: 1;
 }
 
-#alkohols > span > span > .coverImage > h2 {
+#alkohols > span > a:hover > .coverImage {
+    opacity: 1;
+}
+
+#alkohols > span > a > .coverImage > h2 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -142,7 +147,7 @@
     display: inline-block;
 }
 
-#alkohols > span > span > img {
+#alkohols > span > a > img {
     float: right;
     width: 330px;
     margin: 3%;    
@@ -155,7 +160,7 @@
     transition: box-shadow 0.2s linear;
 }
 
-#alkohols > span > span:hover > img {
+#alkohols > span > a:hover > img {
     -webkit-box-shadow: 0px 0px 25px -2px rgba(0,0,0,0.78);
     -moz-box-shadow: 0px 0px 25px -2px rgba(0,0,0,0.78);
     box-shadow: 0px 0px 25px -2px rgba(0,0,0,0.78);
