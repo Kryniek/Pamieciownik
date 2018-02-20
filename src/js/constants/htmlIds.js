@@ -9,3 +9,4 @@ const NEXT_MONTH_BUTTON_ID = 'nextMonthButton';
 const ALL_ALKOHOLS_BUTTON_ID= 'allAlkoholsButton';
 const ALKOHOLS_ID = 'alkohols';
 const SHOW_ALKOHOLS_BUTTON_ID =  'showAlkoholsButton';
+const LAST_TIME_CHOSEN_ALKOHOLS_BUTTON_ID = 'lastTimeChosenAlkoholsButton';
