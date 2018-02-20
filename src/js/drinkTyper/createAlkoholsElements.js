@@ -1,7 +1,11 @@
 var createAlkoholsElements = function (createOnlyLastTimeChosenAlkohols) {
     (function init() {
+        removeAlkoholsElementIfExists();
+
         var allAlkohols = (createOnlyLastTimeChosenAlkohols) ? getOnlyLastTimeChosenAlkohols() : alhohols();
         var alkoholsElement = document.getElementById(ALKOHOLS_ID);
+
+        alkoholsElement.appendChild(getAlkoholsBackButtonElement());
 
         var mainSpanElement = document.createElement(SPAN_TAG);
 
@@ -13,6 +17,18 @@ var createAlkoholsElements = function (createOnlyLastTimeChosenAlkohols) {
 
         alkoholsElement.appendChild(mainSpanElement);
     })();
+
+    function removeAlkoholsElementIfExists() {
+        let alkoholsElement = document.getElementById(ALKOHOLS_ID);
+
+        while (alkoholsElement.hasChildNodes()) {
+            alkoholsElement.removeChild(alkoholsElement.firstChild);
+        }
+
+        if (alkoholsElement.hasAttribute('hidden')) {
+            alkoholsElement.removeAttribute('hidden')
+        }
+    };
 
     function getOnlyLastTimeChosenAlkohols() {
         let onlyLastTimeChosenAlkohols = [];
@@ -27,6 +43,30 @@ var createAlkoholsElements = function (createOnlyLastTimeChosenAlkohols) {
         });
 
         return onlyLastTimeChosenAlkohols;
+    };
+
+    function getAlkoholsBackButtonElement() {
+        let aElement = document.createElement(A_TAG);
+        aElement.setAttribute('id', ALKOHOLS_BACK_BUTTON_ID);
+
+        aElement.onclick = function () {
+            let alkoholsElement = document.getElementById(ALKOHOLS_ID);
+            let showAlkoholsButtonElement = document.getElementById(SHOW_ALKOHOLS_BUTTON_ID);
+
+            alkoholsElement.setAttribute('hidden', true);
+            showAlkoholsButtonElement.removeAttribute('hidden', false);
+        };
+
+        let iElement = document.createElement(I_TAG);
+        iElement.setAttribute('aria-hidden', true);
+
+        let iElementClasses = iElement.classList;
+        iElementClasses.add('fa');
+        iElementClasses.add('fa-chevron-circle-left');
+
+        aElement.appendChild(iElement);
+
+        return aElement;
     };
 
     function getAlkoholElementWithSupplementedInnerTags(alkohol) {

@@ -10,3 +10,4 @@ const ALL_ALKOHOLS_BUTTON_ID= 'allAlkoholsButton';
 const ALKOHOLS_ID = 'alkohols';
 const SHOW_ALKOHOLS_BUTTON_ID =  'showAlkoholsButton';
 const LAST_TIME_CHOSEN_ALKOHOLS_BUTTON_ID = 'lastTimeChosenAlkoholsButton';
+const ALKOHOLS_BACK_BUTTON_ID = 'alkoholsBackButton';
