@@ -41,20 +41,66 @@ var onAllAlkoholsButtonClick = function () {
     };
 
     function getAElement(alkoholId) {
+        const CHOOSED_ALKOHOLS_LOCAL_STORAGE_ID = 'Pamieciownik.drinkTyper.choosedAlkohols';
         let aElement = document.createElement(A_TAG);
+
+        let localStorage = window.localStorage;
+        let choosedAlkohols = JSON.parse(localStorage.getItem(CHOOSED_ALKOHOLS_LOCAL_STORAGE_ID)) || [];
+
+        choosedAlkohols.forEach(function (choosedAlkohol) {
+            if (choosedAlkohol === alkoholId) {
+                aElement.classList.add(CHOOSEN_ALKOHOL_A_CLASS);
+                return;
+            }
+        });
 
         aElement.onclick = function () {
             let me = this;
-            let classes = me.classList;
 
-            if (classes.contains(CHOOSEN_ALKOHOL_A_CLASS)) {
-                classes.remove(CHOOSEN_ALKOHOL_A_CLASS);
+            if (me.classList.contains(CHOOSEN_ALKOHOL_A_CLASS)) {
+                removeAlkohol(me, CHOOSED_ALKOHOLS_LOCAL_STORAGE_ID, alkoholId);
             } else {
-                classes.add(CHOOSEN_ALKOHOL_A_CLASS);
+                addAlkohol(me, CHOOSED_ALKOHOLS_LOCAL_STORAGE_ID, alkoholId);
             }
         };
 
         return aElement;
+    };
+
+    function removeAlkohol(me, CHOOSED_ALKOHOLS_LOCAL_STORAGE_ID, alkoholId) {
+        let localStorage = window.localStorage;
+        let choosedAlkohols = JSON.parse(localStorage.getItem(CHOOSED_ALKOHOLS_LOCAL_STORAGE_ID)) || [];
+
+        choosedAlkohols.forEach(function (choosedAlkohol, choosedAlkoholId) {
+            if (choosedAlkohol === alkoholId) {
+                choosedAlkohols.splice(choosedAlkoholId, 1);
+            }
+        });
+
+        localStorage.setItem(CHOOSED_ALKOHOLS_LOCAL_STORAGE_ID, JSON.stringify(choosedAlkohols));
+
+        me.classList.remove(CHOOSEN_ALKOHOL_A_CLASS);
+    };
+
+    function addAlkohol(me, CHOOSED_ALKOHOLS_LOCAL_STORAGE_ID, alkoholId) {
+        let localStorage = window.localStorage;
+        let choosedAlkohols = JSON.parse(localStorage.getItem(CHOOSED_ALKOHOLS_LOCAL_STORAGE_ID)) || [];
+        let isAlkoholIdInLocalStorage = false;
+
+        choosedAlkohols.forEach(function (choosedAlkohol) {
+            if (choosedAlkohol === alkoholId) {
+                isAlkoholIdInLocalStorage = true;
+                return;
+            }
+        });
+
+        if (!isAlkoholIdInLocalStorage) {
+            choosedAlkohols.push(alkoholId);
+        }
+
+        localStorage.setItem(CHOOSED_ALKOHOLS_LOCAL_STORAGE_ID, JSON.stringify(choosedAlkohols));
+
+        me.classList.add(CHOOSEN_ALKOHOL_A_CLASS);
     };
 
     function getNewImgElements(alkohol) {
