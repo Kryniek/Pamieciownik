@@ -252,6 +252,13 @@ var usersJson = function () {
             born: '1978-01-27',
             nameDate: '',
             imgSrc: ''
+        }, {
+            id: 37,
+            name: 'Arek',
+            surname: 'Richert',
+            born: '1988-03-04',
+            nameDate: '',
+            imgSrc: ''
         }]
     };
 };
