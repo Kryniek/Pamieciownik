@@ -16,32 +16,24 @@
     <link rel="stylesheet" href="../css/button/hamburger/hamburgerButton.css" />
     <link rel="stylesheet" href="../css/button/hamburger/mainHamburgerButton.css" />
     <!-- DRING_TYPER CSS -->
-    <link rel="stylesheet" href="../css/text/whatWeDrinkToday/whatWeDrinkToday.css" />
-    <link rel="stylesheet" href="../css/text/whatWeDrinkToday/whatWeDrinkTodayButton.css" />
-    <link rel="stylesheet" href="../css/panel/drinkTyperRightPanel/alkohols.css" />
-    <link rel="stylesheet" href="../css/text/showAlkohols/showAlkoholsButton.css" />
-    <link rel="stylesheet" href="../css/icon/loading/loading.css" />
+    <link rel="stylesheet" href="../css/panel/drinkTyperResultPanel/randomResult.css" />
     <!-- DRING_TYPER CSS -->
 </head>
 
 <body>
     <header id="header"></header>
     <div class="content">
-        <div id="whatWeDrinkToday">
-            <p>Jeżeli sam nie wiesz</p>
-            <h1>Co dziś pijemy?</h1>
-            <p>pozwól mi za Ciebie wybrać</p>
+        <div id="randomResult">
+            <div id="randomResultImage">
+                <img/>
+            </div>
+            <div id="randomResultName">
+                <h1></h1>
+            </div>
+            <div id="randomResultDescription">
+                <p></p>
+            </div>
         </div>
-        <div id="whatWeDrinkTodayButton">
-            <a>Wylosuj spośród wybranych alkoholi</a>
-        </div>
-        <div id="showAlkoholsButton">
-            <h1>Alkohole</h1>
-            <a id="lastTimeChosenAlkoholsButton">Ostatnio wybrane</a>
-            <a id="allAlkoholsButton">Wszystkie</a>
-        </div>
-        <div id="alkohols"></div>
-        <div id="loading"></div>
     </div>
 
     <script src="../js/constants/htmlClasses.js"></script>
@@ -56,13 +48,8 @@
     <script src="../js/utils.js"></script>
     <script src="../js/events/events.js"></script>
     <!-- DRING_TYPER JS -->
-    <script src="../js/drinkTyper/createAlkoholsElements.js"></script>
-    <script src="../js/drinkTyper/hideShowAlkoholsButtonElement.js"></script>
-    <script src="../js/drinkTyper/onAllAlkoholsButtonClick.js"></script>
-    <script src="../js/drinkTyper/onLastTimeChosenAlkoholsButtonClick.js"></script>
-    <script src="../js/drinkTyper/onWhatWeDrinkTodayButtonClick.js"></script>
-    <script src="../fakeJson/drinkTyper/alkohols.js"></script>
-    <script src="../js/events/drinkTyperEvents.js"></script>
+    <script src="../js/drinkTyper/result/onRandomResultLoad.js"></script>
+    <script src="../js/events/drinkTyperResultEvents.js"></script>
     <!-- DRING_TYPER JS -->
 </body>
 

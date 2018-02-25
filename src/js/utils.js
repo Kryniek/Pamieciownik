@@ -82,3 +82,18 @@ var getFontAwesomeTagByClassAndHref = function (fontAwesomeClass, fontAwesomeHre
 
     return aNode;
 };
+
+function getOnlyLastTimeChosenAlkohols() {
+    let onlyLastTimeChosenAlkohols = [];
+    let allAlkohols = alhohols();
+    let localStorage = window.localStorage;
+    let chosenAlkohols = JSON.parse(localStorage.getItem(CHOOSED_ALKOHOLS_LOCAL_STORAGE_ID)) || [];
+
+    allAlkohols.forEach(function (alkohol) {
+        if (chosenAlkohols.indexOf(alkohol.id) !== -1) {
+            onlyLastTimeChosenAlkohols.push(alkohol);
+        }
+    });
+
+    return onlyLastTimeChosenAlkohols;
+};

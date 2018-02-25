@@ -110,6 +110,25 @@ var injectDefaultHeader = function () {
                 iClass: getIClassByHeaderButtonId(3),
                 h2TextContent: getH2TextContentByHeaderButtonId(3)
             }]
+        }, {
+            id: 4,
+            pageName: DRINK_TYPER_RESULT_HTML_FILE_NAME,
+            buttons: [{
+                id: 1,
+                aTagHref: '../../index.html',
+                iClass: getIClassByHeaderButtonId(1),
+                h2TextContent: getH2TextContentByHeaderButtonId(1)
+            }, {
+                id: 2,
+                aTagHref: 'calendar.html',
+                iClass: getIClassByHeaderButtonId(2),
+                h2TextContent: getH2TextContentByHeaderButtonId(2)
+            }, {
+                id: 3,
+                aTagHref: 'drinkTyper.html',
+                iClass: getIClassByHeaderButtonId(3),
+                h2TextContent: getH2TextContentByHeaderButtonId(3)
+            }]
         }];
     };
 

@@ -30,21 +30,6 @@ var createAlkoholsElements = function (createOnlyLastTimeChosenAlkohols) {
         }
     };
 
-    function getOnlyLastTimeChosenAlkohols() {
-        let onlyLastTimeChosenAlkohols = [];
-        let allAlkohols = alhohols();
-        let localStorage = window.localStorage;
-        let chosenAlkohols = JSON.parse(localStorage.getItem(CHOOSED_ALKOHOLS_LOCAL_STORAGE_ID)) || [];
-
-        allAlkohols.forEach(function (alkohol) {
-            if (chosenAlkohols.indexOf(alkohol.id) !== -1) {
-                onlyLastTimeChosenAlkohols.push(alkohol);
-            }
-        });
-
-        return onlyLastTimeChosenAlkohols;
-    };
-
     function getAlkoholsBackButtonElement() {
         let aElement = document.createElement(A_TAG);
         aElement.setAttribute('id', ALKOHOLS_BACK_BUTTON_ID);

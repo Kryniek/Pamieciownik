@@ -1,0 +1,109 @@
+@media only screen and (min-width: 0px){
+    #randomResult > #randomResultDescription {
+        opacity: 0;
+        max-width: 400px;
+    }
+
+    #randomResult > #randomResultImage {
+        left: 50%;
+
+        -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    #randomResult > #randomResultDescription {
+        opacity: 1;
+        max-width: 400px;
+    }
+
+    #randomResult > #randomResultImage {
+        left: 20%;
+
+        -webkit-transform: translate(-20%, 0%);
+        -ms-transform: translate(-20%, 0%);
+        transform: translate(-20%, 0%);
+    }
+}
+
+@media only screen and (min-width: 1600px){
+    #randomResult > #randomResultDescription {
+        opacity: 1;
+        max-width: 700px;
+    }
+
+    #randomResult > #randomResultImage {
+        left: 20%;
+
+        -webkit-transform: translate(-20%, 0%);
+        -ms-transform: translate(-20%, 0%);
+        transform: translate(-20%, 0%);
+    }
+}
+
+#randomResult > div {
+    position: fixed;
+}
+
+#randomResult > #randomResultImage {
+    top: 150px;
+
+    transition: left 0.3s linear, transform 0.3s linear;
+}
+
+#randomResult > #randomResultName {
+    left: 50%;
+    top: 5%;
+
+    -webkit-transform: translate(-50%, -5%);
+    -ms-transform: translate(-50%, -5%);
+    transform: translate(-50%, -5%);
+}
+
+#randomResult > #randomResultDescription {
+    right: 5%;
+    top: 150px;
+
+    transition: opacity 0.3s linear, max-width 0.3s linear;
+}
+
+#randomResult > div > h1,p {
+    font-family:"ComfortaaRegularFont";
+    background-color: rgba(33, 33, 33, 0.6);
+    border: 2px solid rgba(0, 130, 132, 0.7);
+
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    border-radius: 20%;
+
+    padding: 20px;
+
+    -webkit-box-shadow: 0px 0px 20px rgba(244, 182, 66, 0.5);
+    -moz-box-shadow: 0px 0px 20px rgba(244, 182, 66, 0.5);
+    box-shadow: 0px 0px 20px rgba(244, 182, 66, 0.5);
+
+    text-align: center;
+}
+
+#randomResult > #randomResultName > h1 {
+    color:rgb(244, 182, 66);
+}
+
+#randomResult > #randomResultDescription > p {
+    color:white;
+}
+
+#randomResult > #randomResultImage > img {
+    height: 350px;
+
+    -webkit-box-shadow: 0px 0px 20px rgba(244, 182, 66, 0.5);
+    -moz-box-shadow: 0px 0px 20px rgba(244, 182, 66, 0.5);
+    box-shadow: 0px 0px 20px rgba(244, 182, 66, 0.5);
+
+    border: 2px solid rgba(0, 130, 132, 0.7);
+    border-radius: 15%;
+
+    max-width: 1000px;
+}

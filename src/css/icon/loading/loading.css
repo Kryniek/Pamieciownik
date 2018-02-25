@@ -1,0 +1,63 @@
+@-webkit-keyframes spinLoading {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+@-moz-keyframes spinLoading {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+@keyframes spinLoading {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+@-ms-keyframes spinLoading {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#loading{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+}
+
+#loading > i {
+    font-size: 500%;
+    color: rgba(255,255,255,0.78);
+
+    -webkit-animation-name: spinLoading;
+    -webkit-animation-duration: 1500ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+    -moz-animation-name: spinLoading;
+    -moz-animation-duration: 1500ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+    -ms-animation-name: spinLoading;
+    -ms-animation-duration: 1500ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    
+    animation-name: spinLoading;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
