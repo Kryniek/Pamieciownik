@@ -10,6 +10,10 @@
         transform: translate(50%, 0%);
     }
 
+    #alkohols > span {
+        margin-top: 15%;
+    }
+
     #alkohols > span > a :first-child {
         display: none;
     }
@@ -25,6 +29,10 @@
         -webkit-transform: translate(50%, 0%);
         -ms-transform: translate(50%, 0%);
         transform: translate(50%, 0%);
+    }
+
+    #alkohols > span {
+        margin-top: 15%;
     }
 
     #alkohols > span > a :first-child {
@@ -44,6 +52,10 @@
         transform: translate(0%, 0%);
     }
 
+    #alkohols > span {
+        margin-top: 15%;
+    }
+
     #alkohols > span > a :first-child {
         display: none;
     }
@@ -59,6 +71,10 @@
         -webkit-transform: translate(0%, 0%);
         -ms-transform: translate(0%, 0%);
         transform: translate(0%, 0%);
+    }
+
+    #alkohols > span {
+        margin-top: 7%;
     }
 
     #alkohols > span > a :first-child {
@@ -106,7 +122,6 @@
     width: 100%;
     position: absolute;
 
-    margin-top: 15%;
     margin-left: 1%;
     margin-right: 1%;
     margin-bottom: 1%;
