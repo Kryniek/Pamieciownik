@@ -259,6 +259,13 @@ var usersJson = function () {
             born: '1988-03-04',
             nameDate: '',
             imgSrc: ''
+        }, {
+            id: 38,
+            name: 'Małgorzata',
+            surname: 'Wendt',
+            born: '1992-08-13',
+            nameDate: '',
+            imgSrc: ''
         }]
     };
 };
