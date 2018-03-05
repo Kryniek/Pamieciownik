@@ -97,3 +97,25 @@ function getOnlyLastTimeChosenAlkohols() {
 
     return onlyLastTimeChosenAlkohols;
 };
+
+function getDayOfWeekShortNameByHisNumber(dayOfWeekNumber) {
+    var dayOfWeekShortName = null;
+
+    if (dayOfWeekNumber === 0) {
+        dayOfWeekShortName = 'Nd';
+    } else if (dayOfWeekNumber === 1) {
+        dayOfWeekShortName = 'Pon';
+    } else if (dayOfWeekNumber === 2) {
+        dayOfWeekShortName = 'Wt';
+    } else if (dayOfWeekNumber === 3) {
+        dayOfWeekShortName = 'Śr';
+    } else if (dayOfWeekNumber === 4) {
+        dayOfWeekShortName = 'Czw';
+    } else if (dayOfWeekNumber === 5) {
+        dayOfWeekShortName = 'Pt';
+    } else if (dayOfWeekNumber === 6) {
+        dayOfWeekShortName = 'Sob';
+    }
+
+    return dayOfWeekShortName;
+};

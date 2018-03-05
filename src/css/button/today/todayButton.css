@@ -643,3 +643,7 @@
 .todayButton > h1 {
     color: rgb(244, 182, 66) !important;
 }
+
+.todayButton > p {
+    color: rgb(244, 182, 66) !important;
+}
