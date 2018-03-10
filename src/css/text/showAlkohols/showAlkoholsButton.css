@@ -35,7 +35,7 @@
     #showAlkoholsButton{
         width: 350px;
         right: 50%;
-        top: 50%;
+        top: 300px;
         height: 250px;
 
         -webkit-transform: translate(50%, 0%);

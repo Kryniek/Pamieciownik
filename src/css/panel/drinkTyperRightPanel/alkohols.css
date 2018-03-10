@@ -23,8 +23,8 @@
     #alkohols{
         width: 350px;
         right: 50%;
-        top: 50%;
-        height: 50%;
+        top: 300px;
+        height: 70%;
 
         -webkit-transform: translate(50%, 0%);
         -ms-transform: translate(50%, 0%);
