@@ -1,3 +1,15 @@
+@media only screen and (min-width: 0px) {
+    #nextMonthButton> a > i {
+        font-size: 500%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    #nextMonthButton> a > i {
+        font-size: 300%;
+    }
+}
+
 #nextMonthButton {
     background-color:transparent;
     opacity: 0.7;
@@ -5,15 +17,18 @@
 
     left: 60px;
     bottom: 2%;
+
+    z-index: 1;
 }
 
 #nextMonthButton> a > i{
-    font-size: 300%;
     color:white;
     position: relative;
 
     margin-left: 1%;
     margin-top: 1%;
+
+    transition: font-size 0.3s linear;
 }
 
 #nextMonthButton:hover{
