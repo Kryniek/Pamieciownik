@@ -1,0 +1,8 @@
+#squareButtonGroup{
+    position: absolute;
+    left: 100px;
+
+    top: 180px;
+
+    transition: top 0.35s linear;
+}

@@ -1,0 +1,16 @@
+#currentMonth{
+    position: absolute;
+    color:rgb(0, 130, 132);
+
+    font-size: 250%;
+    text-shadow: 0px 2px 3px black;
+
+    left: 50%;
+    top: 1%;
+
+    -webkit-transform: translate(-50%, -1%);
+    -ms-transform: translate(-50%, -1%);
+    transform: translate(-50%, -1%);
+
+    transition: translate 0.35s linear;
+}

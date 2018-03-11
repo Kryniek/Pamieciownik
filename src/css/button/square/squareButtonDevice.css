@@ -1,0 +1,75 @@
+.squareButton{
+    border: 4px solid white;
+    width: 130px;
+    height: 165px;
+    margin: 0.8%;
+    -webkit-box-shadow: 0px 0px 25px -2px rgba(255,255,255,0.78);
+    -moz-box-shadow: 0px 0px 25px -2px rgba(255,255,255,0.78);
+    box-shadow: 0px 0px 25px -2px rgba(255,255,255,0.78);
+
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+
+    border-radius: 10%;
+    background-color: rgb(33, 33, 33);
+    
+    position: relative;
+    display: inline-block;
+
+    transition: transform 0.2s linear, border 0.2s linear, width 0.2s linear, height 0.2s linear, margin 0.2s linear, box-shadow 0.2s linear;
+}
+
+.squareButton:hover{
+    border: 4px solid rgb(244, 182, 66) !important;
+}
+
+.squareButton > h1{
+    color: white;
+    margin: 4px;
+    font-size: 70px;
+
+    transition: margin 0.2s linear, font-size 0.2s linear;
+}
+
+.squareButton > p {
+    position: absolute;
+    color: white;
+    bottom: 0;
+    margin-left: 1%;
+    font-family:"ComfortaaRegularFont";
+
+    font-size: 25px;
+
+    transition: font-size 0.2s linear;
+}
+
+.squareButton > span {
+    position: absolute;
+    left: 70%;
+
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+    transition: transform 0.2s linear;
+}
+
+.squareButton > span > i{
+    color:white;
+    position: relative;
+
+    font-size: 350%;
+
+    transition: font-size 0.2s linear;
+}
+
+.squareButton:hover > span {
+    color:white;
+
+    -webkit-transform: translate(-50%, -50%) scale(1.05,1.05);
+    -ms-transform: translate(-50%, -50%) scale(1.05,1.05);
+    transform: translate(-50%, -50%) scale(1.05,1.05);
+
+    transition: transform 0.2s linear;
+}

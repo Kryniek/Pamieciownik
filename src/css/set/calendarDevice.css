@@ -1,2 +1,5 @@
 @import url("../button/anotherMonth/nextMonthButtonDevice.css");
 @import url("../button/anotherMonth/previousMonthButtonDevice.css");
+@import url("../button/square/squareButtonGroupDevice.css");
+@import url("../button/square/squareButtonDevice.css");
+@import url("../text/currentMonth/currentMonthDevice.css");
