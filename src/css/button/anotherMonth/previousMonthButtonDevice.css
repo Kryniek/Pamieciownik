@@ -1,30 +1,30 @@
-#nextMonthButton {
+#previousMonthButton {
     background-color:transparent;
     opacity: 0.7;
     position: fixed;
 
     left: 60px;
-    bottom: 2%;
+    top: 20px;
 
     z-index: 1;
 }
 
-#nextMonthButton> a > i{
+#previousMonthButton> a > i{
     color:white;
     position: relative;
 
     margin-left: 1%;
     margin-top: 1%;
-    font-size: 300%;
+    font-size: 500%;
 
     transition: font-size 0.3s linear;
 }
 
-#nextMonthButton:hover{
+#previousMonthButton:hover{
     opacity: 1;
 }
 
-#nextMonthButton:hover > a >i{
+#previousMonthButton:hover > a >i{
     -webkit-transform: scale(1.15,1.15);
     -ms-transform: scale(1.15,1.15);
     transform: scale(1.15,1.15);
@@ -32,7 +32,7 @@
     transition: transform 0.2s ease-in-out;
 }
 
-#nextMonthButton:active > a >i{
+#previousMonthButton:active > a >i{
     color:rgb(0, 130, 132);
 
     transition: color 0.1s ease-in-out;

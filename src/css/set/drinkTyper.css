@@ -1,0 +1,8 @@
+@import url("../main.css");
+@import url("../libs.css");
+
+@import url("../text/whatWeDrinkToday/whatWeDrinkToday.css");
+@import url("../text/whatWeDrinkToday/whatWeDrinkTodayButton.css");
+@import url("../panel/drinkTyperRightPanel/alkohols.css");
+@import url("../text/showAlkohols/showAlkoholsButton.css");
+@import url("../icon/loading/loading.css");

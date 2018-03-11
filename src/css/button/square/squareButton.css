@@ -99,11 +99,13 @@
     position: relative;
     display: inline-block;
 
-    transition: transform 0.2s linear;
+    transition: transform 0.2s linear, border 0.2s linear, width 0.2s linear, height 0.2s linear, margin 0.2s linear, box-shadow 0.2s linear;
 }
 
 .squareButton > h1{
     color: white;
+
+    transition: margin 0.2s linear, font-size 0.2s linear;
 }
 
 .squareButton > p {
@@ -112,6 +114,8 @@
     bottom: 0;
     margin-left: 1%;
     font-family:"ComfortaaRegularFont";
+
+    transition: font-size 0.2s linear;
 }
 
 .squareButton > span {
@@ -121,12 +125,15 @@
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    
     transition: transform 0.2s linear;
 }
 
 .squareButton > span > i{
     color:white;
     position: relative;
+
+    transition: font-size 0.2s linear;
 }
 
 .squareButton:hover > span {
