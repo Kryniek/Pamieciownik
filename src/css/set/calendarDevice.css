@@ -3,3 +3,5 @@
 @import url("../button/square/squareButtonGroupDevice.css");
 @import url("../button/square/squareButtonDevice.css");
 @import url("../text/currentMonth/currentMonthDevice.css");
+@import url("../panel/calendarRightPanel/button/rightPanelBackButtonDevice.css");
+@import url("../panel/calendarRightPanel/rightPanelDevice.css");

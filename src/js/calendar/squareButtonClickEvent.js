@@ -18,15 +18,23 @@ var squareButtonClickEvent = function () {
 
     var rightPanel = document.getElementById(RIGHT_PANEL_ID);
     var rightPanelStyle = rightPanel.style;
-    
+
     Array.from(rightPanel.children).forEach(function (child) {
         if (child.tagName === SPAN_TAG) {
             rightPanel.removeChild(child);
         }
     });
 
+    var rightPanelWidth = null;
+
+    if (isDevice()) {
+        rightPanelWidth = '80%';
+    } else {
+        rightPanelWidth = '50%';
+    }
+
     rightPanelStyle.setProperty('transition', 'width 0.3s linear');
-    rightPanelStyle.setProperty('width', '50%');
+    rightPanelStyle.setProperty('width', rightPanelWidth);
 
     var users = usersJson().users;
     var requestedDayBirthdayUsers = [];
@@ -40,35 +48,35 @@ var squareButtonClickEvent = function () {
         if (requestedMonth === bornMonth && requestedDay === bornDay) {
             requestedDayBirthdayUsers.push(user);
         }
-        
+
         var nameDate = new Date(user.nameDate);
         var nameMonth = nameDate.getMonth() + 1;
         var nameDay = nameDate.getDate();
-        
+
         if (requestedMonth === nameMonth && requestedDay === nameDay) {
             requestedDayNamedayUsers.push(user);
         }
     });
-    
+
     var rightPanelParentSpanElement = document.createElement(SPAN_TAG);
-    
-    var addUserElementToRightPanelParentSpanElement = function(user, isBirthday){
+
+    var addUserElementToRightPanelParentSpanElement = function (user, isBirthday) {
         var userFullNameWithAge = user.name + ' ' + user.surname + ', ';
         var userYearsOldNumber = new Date().getFullYear() - new Date(user.born).getFullYear();
         userFullNameWithAge += userYearsOldNumber;
-        userFullNameWithAge += (isBirthday)? ' urodziny' : ' imieniny';
+        userFullNameWithAge += (isBirthday) ? ' urodziny' : ' imieniny';
 
         var rightPanelSpanNode = document.createElement(SPAN_TAG);
         var spanH2Node = document.createElement(H2_TAG);
         spanH2Node.textContent = userFullNameWithAge;
 
         rightPanelSpanNode.appendChild(spanH2Node);
-        
+
         var userImgSrc = user.imgSrc;
-        
-        if(userImgSrc){
+
+        if (userImgSrc) {
             var USER_IMG_SRC = '../img/users/';
-            
+
             var spanIMGNode = document.createElement(IMG_TAG);
             spanIMGNode.src = USER_IMG_SRC + userImgSrc;
 
@@ -88,7 +96,7 @@ var squareButtonClickEvent = function () {
     requestedDayBirthdayUsers.forEach(function (user) {
         addUserElementToRightPanelParentSpanElement(user, true);
     });
-    
+
     requestedDayNamedayUsers.forEach(function (user) {
         addUserElementToRightPanelParentSpanElement(user, false);
     });

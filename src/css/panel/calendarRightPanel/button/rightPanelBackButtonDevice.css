@@ -1,0 +1,32 @@
+#rightPanelBackButton{
+    background-color:transparent;
+    opacity: 0.7;
+}
+
+
+#rightPanelBackButton> a > i{
+    font-size: 500%;
+    color:white;
+    position: relative;
+
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+#rightPanelBackButton:hover{
+    opacity: 1;
+}
+
+#rightPanelBackButton:hover > a >i{
+    -webkit-transform: scale(1.15,1.15);
+    -ms-transform: scale(1.15,1.15);
+    transform: scale(1.15,1.15);
+
+    transition: transform 0.2s ease-in-out;
+}
+
+#rightPanelBackButton:active > a >i{
+    color:rgb(0, 130, 132);
+
+    transition: color 0.1s ease-in-out;
+}
