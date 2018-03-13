@@ -28,7 +28,7 @@ var squareButtonClickEvent = function () {
     var rightPanelWidth = null;
 
     if (isDevice()) {
-        rightPanelWidth = '80%';
+        rightPanelWidth = '75%';
     } else {
         rightPanelWidth = '50%';
     }

@@ -4,8 +4,10 @@ var mainHamburgerButtonClickEvent = function () {
     var headerStyle = document.getElementById(HEADER_ID).style;
     var hamburgerButtons = Array.from(document.getElementsByClassName(HAMBURGER_BUTTON_CLASS));
 
+    var width = isDevice() ? '420px' : '200px';
+
     headerStyle.setProperty('transition', 'width 0.35s linear');
-    headerStyle.setProperty('width', '200px');
+    headerStyle.setProperty('width', width);
 
     hamburgerButtons.forEach(function (hamburgerButton) {
         if (hamburgerButton.className === HAMBURGER_BUTTON_CLASS) {
@@ -20,17 +22,17 @@ var mainHamburgerButtonClickEvent = function () {
     var squareButtonGroupElement = document.getElementById(SQUARE_BUTTON_GROUP_ID);
 
     if (squareButtonGroupElement) {
-        const LEFT_STYLE_VALUE_TO_ADD = 200;
+        let LEFT_STYLE_VALUE_TO_ADD = isDevice() ? 300 : 200;
 
-        var squareButtonGroupElementStyle = squareButtonGroupElement.style;
-        var squareButtonGroupElementLeft = window.getComputedStyle(squareButtonGroupElement).getPropertyValue('left');
+        let squareButtonGroupElementStyle = squareButtonGroupElement.style;
+        let squareButtonGroupElementLeft = window.getComputedStyle(squareButtonGroupElement).getPropertyValue('left');
         squareButtonGroupElementLeft = parseInt(squareButtonGroupElementLeft.replace('px', ''));
 
         if (squareButtonGroupElementLeft < LEFT_STYLE_VALUE_TO_ADD) {
             squareButtonGroupElementStyle.setProperty('left', squareButtonGroupElementLeft + LEFT_STYLE_VALUE_TO_ADD + 'px');
 
-            var currentMonthElement = document.getElementById(CURRENT_MONTH_ID);
-            var currentMonthElementLeft = window.getComputedStyle(currentMonthElement).getPropertyValue('left');
+            let currentMonthElement = document.getElementById(CURRENT_MONTH_ID);
+            let currentMonthElementLeft = window.getComputedStyle(currentMonthElement).getPropertyValue('left');
             currentMonthElementLeft = parseInt(currentMonthElementLeft.replace('px', ''));
 
             currentMonthElement.style.setProperty('left', currentMonthElementLeft + LEFT_STYLE_VALUE_TO_ADD + 'px');

@@ -5,3 +5,5 @@
 @import url("../text/currentMonth/currentMonthDevice.css");
 @import url("../panel/calendarRightPanel/button/rightPanelBackButtonDevice.css");
 @import url("../panel/calendarRightPanel/rightPanelDevice.css");
+@import url("../header/headerDevice.css");
+@import url("../button/hamburger/hamburgerButtonDevice.css");

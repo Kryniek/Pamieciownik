@@ -21,6 +21,7 @@
 
     #randomResult > #randomResultImage > img {
         height: 500px;
+        max-width: 700px;
     }
 
     #randomResult > div > h1 {
@@ -59,6 +60,7 @@
 
     #randomResult > #randomResultImage > img {
         height: 350px;
+        max-width: 1000px;
     }
 
     #randomResult > div > h1 {
@@ -97,6 +99,7 @@
 
     #randomResult > #randomResultImage > img {
         height: 350px;
+        max-width: 1000px;
     }
 
     #randomResult > div > h1 {
@@ -169,6 +172,4 @@
 
     border: 2px solid rgba(0, 130, 132, 0.7);
     border-radius: 15%;
-
-    max-width: 1000px;
 }
