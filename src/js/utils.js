@@ -123,3 +123,7 @@ function getDayOfWeekShortNameByHisNumber(dayOfWeekNumber) {
 function isDevice() {
     return window.matchMedia("only screen and (max-device-width: 720px)").matches;
 };
+
+function getHtmlPageName() {
+    return window.location.pathname.split("/").pop();
+};

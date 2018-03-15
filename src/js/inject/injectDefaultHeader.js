@@ -1,6 +1,6 @@
 var injectDefaultHeader = function () {
     (function injectDefaultHeader() {
-        var htmlPageName = window.location.pathname.split("/").pop();
+        var htmlPageName = getHtmlPageName();
         var headerButtons = getHeaderButtonsByPageName(htmlPageName);
         var headerElement = document.getElementById(HEADER_ID);
 
