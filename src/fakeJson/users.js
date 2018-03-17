@@ -13,7 +13,7 @@ var usersJson = function () {
             surname: 'Mrzygłocki',
             born: '1954-10-02',
             nameDate: '',
-            imgSrc: ''
+            imgSrc: 'zm1954.jpg'
         }, {
             id: 3,
             name: 'Regina',
@@ -69,7 +69,7 @@ var usersJson = function () {
             surname: 'Mrzygłocka',
             born: '2011-01-10',
             nameDate: '',
-            imgSrc: ''
+            imgSrc: 'em2011.jpg'
         }, {
             id: 11,
             name: 'Kasia',
@@ -90,7 +90,7 @@ var usersJson = function () {
             surname: 'Mrzygłocka',
             born: '1984-04-23',
             nameDate: '',
-            imgSrc: ''
+            imgSrc: 'mm1984.jpg'
         }, {
             id: 14,
             name: 'Asia',
@@ -167,14 +167,14 @@ var usersJson = function () {
             surname: 'Maciąg',
             born: '1998-11-30',
             nameDate: '',
-            imgSrc: ''
+            imgSrc: 'sm1998.jpg'
         }, {
             id: 25,
             name: 'Radek',
             surname: 'Mierzejewski',
             born: '1993-03-29',
             nameDate: '',
-            imgSrc: ''
+            imgSrc: 'rm1993.jpg'
         }, {
             id: 26,
             name: 'Patryk',
@@ -188,7 +188,7 @@ var usersJson = function () {
             surname: 'Szulc',
             born: '1989-12-02',
             nameDate: '',
-            imgSrc: ''
+            imgSrc: 'ds1989.jpg'
         }, {
             id: 28,
             name: 'Milena',
@@ -202,7 +202,7 @@ var usersJson = function () {
             surname: 'Lewicki',
             born: '1992-10-17',
             nameDate: '',
-            imgSrc: ''
+            imgSrc: 'ml1992.jpg'
         }, {
             id: 30,
             name: 'Szymon',
@@ -230,42 +230,49 @@ var usersJson = function () {
             surname: 'Szatkiewicz',
             born: '1975-07-29',
             nameDate: '1975-11-05',
-            imgSrc: ''
+            imgSrc: 'ssz1975.jpg'
         }, {
             id: 34,
             name: 'Aneta',
             surname: 'Jurkiewicz',
             born: '1978-12-23',
             nameDate: '',
-            imgSrc: ''
+            imgSrc: 'aj1978.jpg'
         }, {
             id: 35,
             name: 'Bianka',
             surname: 'Szatkiewicz',
             born: '2012-09-04',
             nameDate: '',
-            imgSrc: ''
+            imgSrc: 'bsz2012.jpg'
         }, {
             id: 36,
             name: 'Aleksander',
             surname: 'Jeszke',
             born: '1978-01-27',
             nameDate: '',
-            imgSrc: ''
+            imgSrc: 'aje1978.jpg'
         }, {
             id: 37,
             name: 'Arek',
             surname: 'Richert',
             born: '1988-03-04',
             nameDate: '',
-            imgSrc: ''
+            imgSrc: 'ar1988.jpg'
         }, {
             id: 38,
             name: 'Małgorzata',
             surname: 'Wendt',
             born: '1992-08-13',
             nameDate: '',
-            imgSrc: ''
+            imgSrc: 'mw1992.jpg'
+        }, {
+            id: 39,
+            name: 'Grzegorz',
+            surname: 'Mrzygłocki',
+            born: '1984-03-20',
+            nameDate: '',
+            imgSrc: 'gm1984.jpg'
         }]
     };
 };

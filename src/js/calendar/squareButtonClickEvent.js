@@ -72,7 +72,10 @@ var squareButtonClickEvent = function () {
 
         rightPanelSpanNode.appendChild(spanH2Node);
 
-        var userImgSrc = user.imgSrc;
+        // var userImgSrc = user.imgSrc;
+        //for now it will be null
+        //#43 Allow users images to be viewed.
+        var userImgSrc = null;
 
         if (userImgSrc) {
             var USER_IMG_SRC = '../img/users/';
