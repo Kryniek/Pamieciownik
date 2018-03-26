@@ -12,9 +12,13 @@ var onLoadCalendar = function (requestedMonth) {
             addUserBornDay(user, month, squareButtonGroupElement);
 
             addUserNameDay(user, month, squareButtonGroupElement);
-
-            addSquareButtonClickEvents();
         });
+
+        holidays().forEach(function (holiday) {
+            addHoliday(holiday, month, squareButtonGroupElement);
+        });
+
+        addSquareButtonClickEvents();
     })();
 
     function addSquareButtonClickEvents() {
@@ -151,12 +155,26 @@ var onLoadCalendar = function (requestedMonth) {
         }
     };
 
+    function addHoliday(holiday, month, squareButtonGroupElement) {
+        var holidayMonth = holiday.month;
+        var isHolidayThisMonth = holidayMonth === month;
+
+        if (isHolidayThisMonth) {
+            let holidayDate = new Date();
+            holidayDate.setMonth(holidayMonth - 1);
+            holidayDate.setDate(holiday.day);
+
+            updateCalendarDayElementOnEvent(holidayDate, 'HOLIDAY', squareButtonGroupElement);
+        }
+    };
+
     function updateCalendarDayElementOnEvent(eventdate, eventType, squareButtonGroupElement) {
         const BIRTHDAY_EVENT_CLASS = 'fa-birthday-cake';
         const NAME_DAY_EVENT_CLASS = 'fa-gift';
+        const HOLIDAY_EVENT_CLASS = 'fa-globe';
 
         var squareButtonElement = getEventDayNode(eventdate.getDate(), squareButtonGroupElement);
-        var squareButtonH1Node = getSquareButtonH1Node(eventType, BIRTHDAY_EVENT_CLASS, NAME_DAY_EVENT_CLASS);
+        var squareButtonH1Node = getSquareButtonH1Node(eventType, BIRTHDAY_EVENT_CLASS, NAME_DAY_EVENT_CLASS, HOLIDAY_EVENT_CLASS);
 
         var squareButtonSpanNode = document.createElement(SPAN_TAG);
         squareButtonSpanNode.appendChild(squareButtonH1Node);
@@ -164,6 +182,7 @@ var onLoadCalendar = function (requestedMonth) {
         var spanNodeExists = false;
         var isBirthDayEvent = eventType === 'BIRTHDAY';
         var isNameDayEvent = eventType === 'NAME_DAY';
+        var isHolidayEvent = eventType === 'HOLIDAY';
 
         var squareButtonElementChildren = squareButtonElement.children;
         for (let childIndex in squareButtonElementChildren) {
@@ -186,10 +205,13 @@ var onLoadCalendar = function (requestedMonth) {
                             let thirdDepthChild = secondDepthChildClasses[thirdDepthChildIndex];
                             let isBirthDayEventClass = thirdDepthChild === BIRTHDAY_EVENT_CLASS;
                             let isNameDayEventClass = thirdDepthChild === NAME_DAY_EVENT_CLASS;
+                            let isHolidayEventClass = thirdDepthChild === HOLIDAY_EVENT_CLASS;
 
                             if (isBirthDayEvent && isBirthDayEventClass) {
                                 allowToAppendChild = false;
                             } else if (isNameDayEvent && isNameDayEventClass) {
+                                allowToAppendChild = false;
+                            } else if(isHolidayEvent && isHolidayEventClass){
                                 allowToAppendChild = false;
                             }
                         }
@@ -227,7 +249,7 @@ var onLoadCalendar = function (requestedMonth) {
         return squareButtonElement;
     };
 
-    function getSquareButtonH1Node(eventType, BIRTHDAY_EVENT_CLASS, NAME_DAY_EVENT_CLASS) {
+    function getSquareButtonH1Node(eventType, BIRTHDAY_EVENT_CLASS, NAME_DAY_EVENT_CLASS, HOLIDAY_EVENT_CLASS) {
         var squareButtonH1Node = document.createElement(I_TAG);
         var squareButtonH1NodeClassList = squareButtonH1Node.classList;
 
@@ -235,11 +257,14 @@ var onLoadCalendar = function (requestedMonth) {
 
         var isBirthDayEvent = eventType === 'BIRTHDAY';
         var isNameDayEvent = eventType === 'NAME_DAY';
+        var isHolidayEvent = eventType === 'HOLIDAY';
 
         if (isBirthDayEvent) {
             squareButtonH1NodeClassList.add(BIRTHDAY_EVENT_CLASS);
         } else if (isNameDayEvent) {
             squareButtonH1NodeClassList.add(NAME_DAY_EVENT_CLASS);
+        } else if (isHolidayEvent) {
+            squareButtonH1NodeClassList.add(HOLIDAY_EVENT_CLASS);
         }
 
         return squareButtonH1Node;

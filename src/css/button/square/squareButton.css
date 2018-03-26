@@ -24,7 +24,7 @@
     }
 
     .squareButton > span > i{
-        font-size: 180%;
+        font-size: 110%;
     }
 }
 
@@ -54,7 +54,7 @@
     }
 
     .squareButton > span > i{
-        font-size: 300%;
+        font-size: 180%;
     }
 }
 
@@ -84,7 +84,7 @@
     }
 
     .squareButton > span > i{
-        font-size: 350%;
+        font-size: 250%;
     }
 }
 
@@ -120,7 +120,7 @@
 
 .squareButton > span {
     position: absolute;
-    left: 70%;
+    left: 80%;
 
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);

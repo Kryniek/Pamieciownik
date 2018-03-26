@@ -11,6 +11,7 @@ var squareButtonClickEvent = function () {
         var requestedDay = getRequestedDay();
         var requestedDayBirthdayUsers = getRequestedDayBirthdayUsers(requestedMonth, requestedDay);
         var requestedDayNamedayUsers = getRequestedDayNamedayUsers(requestedMonth, requestedDay);
+        var requestedDayHolidayEvents = getRequestedDayHolidayEvents(requestedMonth, requestedDay);
 
         var rightPanelParentSpanElement = document.createElement(SPAN_TAG);
 
@@ -22,6 +23,12 @@ var squareButtonClickEvent = function () {
 
         requestedDayNamedayUsers.forEach(function (user) {
             let rightPanelSpanElement = getRightPanelSpanElementWithUserElement(user, false);
+
+            rightPanelParentSpanElement.appendChild(rightPanelSpanElement);
+        });
+
+        requestedDayHolidayEvents.forEach(function (holiday) {
+            let rightPanelSpanElement = getRightPanelSpanElementWithHolidayElement(holiday);
 
             rightPanelParentSpanElement.appendChild(rightPanelSpanElement);
         });
@@ -61,6 +68,23 @@ var squareButtonClickEvent = function () {
 
             rightPanelSpanElement.appendChild(spanH1Node);
         }
+
+        return rightPanelSpanElement;
+    };
+
+    function getRightPanelSpanElementWithHolidayElement(holiday) {
+        var rightPanelSpanElement = document.createElement(SPAN_TAG);
+        var spanH2Node = document.createElement(H2_TAG);
+        spanH2Node.textContent = holiday.name;
+
+        rightPanelSpanElement.appendChild(spanH2Node);
+
+        var spanH1Node = document.createElement(I_TAG);
+        var spanH1NodeClassList = spanH1Node.classList;
+        spanH1NodeClassList.add('fa');
+        spanH1NodeClassList.add('fa-globe');
+
+        rightPanelSpanElement.appendChild(spanH1Node);
 
         return rightPanelSpanElement;
     };
@@ -164,5 +188,20 @@ var squareButtonClickEvent = function () {
         });
 
         return requestedDayNamedayUsers;
+    };
+
+    function getRequestedDayHolidayEvents(requestedMonth, requestedDay) {
+        var requestedDayHolidayEvents = [];
+
+        holidays().forEach(function (holiday) {
+            var isHolidayThisMonth = requestedMonth === holiday.month;
+            var isHolidayThisDay = requestedDay === holiday.day;
+
+            if (isHolidayThisMonth && isHolidayThisDay) {
+                requestedDayHolidayEvents.push(holiday);
+            }
+        });
+
+        return requestedDayHolidayEvents;
     };
 };
