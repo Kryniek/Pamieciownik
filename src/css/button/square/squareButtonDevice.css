@@ -46,7 +46,7 @@
 
 .squareButton > span {
     position: absolute;
-    left: 70%;
+    left: 80%;
 
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -59,7 +59,7 @@
     color:white;
     position: relative;
 
-    font-size: 350%;
+    font-size: 250%;
 
     transition: font-size 0.2s linear;
 }
