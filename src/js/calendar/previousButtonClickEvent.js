@@ -1,18 +1,32 @@
 var previousButtonClickEvent = function () {
-    var requestedMonth = null;
-    var currentMonthElement = document.getElementById(CURRENT_MONTH_ID);
+    (function init() {
+        loadPreviousMonth();
+    })();
 
-    Array.from(currentMonthElement.children).forEach(function (child) {
-        if (child.tagName === H1_TAG) {
-            requestedMonth = child.textContent;
+    function loadPreviousMonth() {
+        var currentMonth = getCurrentMonthName();
+        var requestedMonthNumber = getMonthNumberByMonthName(currentMonth) - 1;
+
+        if (requestedMonthNumber < 1) {
+            requestedMonthNumber = 12;
         }
-    });
 
-    var requestedMonthNumber = getMonthNumberByMonthName(requestedMonth) - 1;
+        onLoadCalendar(requestedMonthNumber);
+    };
 
-    if (requestedMonthNumber < 1) {
-        requestedMonthNumber = 12;
-    }
+    function getCurrentMonthName() {
+        var currentMonth = null;
+        var currentMonthElement = document.getElementById(CURRENT_MONTH_ID);
+        var currentMonthElementChildren = currentMonthElement.children;
 
-    onLoadCalendar(requestedMonthNumber);
+        for (let childIndex in currentMonthElementChildren) {
+            let child = currentMonthElementChildren[childIndex];
+
+            if (child.tagName === H1_TAG) {
+                currentMonth = child.textContent;
+            }
+        }
+
+        return currentMonth;
+    };
 };

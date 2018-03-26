@@ -1,8 +1,8 @@
-var getDaysCountInMonth = function (year, month) {
+function getDaysCountInMonth(year, month) {
     return new Date(year, month, 0).getDate();
 };
 
-var getMonthNameByMonthNumber = function (month) {
+function getMonthNameByMonthNumber(month) {
     var monthName = null;
 
     if (month === 1) {
@@ -34,7 +34,7 @@ var getMonthNameByMonthNumber = function (month) {
     return monthName;
 };
 
-var getMonthNumberByMonthName = function (month) {
+function getMonthNumberByMonthName(month) {
     var monthNumber = null;
 
     if (month === 'Styczeń') {
@@ -66,7 +66,7 @@ var getMonthNumberByMonthName = function (month) {
     return monthNumber;
 };
 
-var getFontAwesomeTagByClassAndHref = function (fontAwesomeClass, fontAwesomeHref) {
+function getFontAwesomeTagByClassAndHref(fontAwesomeClass, fontAwesomeHref) {
     const DEFAULT_I_TAG_CLASS = 'fa';
     const ARIA_HIDDEN_ATTRIBUTE = 'aria-hidden';
 

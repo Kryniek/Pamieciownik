@@ -1,76 +1,45 @@
 var squareButtonClickEvent = function () {
-    var me = this;
-    var requestedDay = null;
-    var requestedMonth = null;
-    var currentMonthElement = document.getElementById(CURRENT_MONTH_ID);
+    const me = this;
 
-    Array.from(me.children).forEach(function (child) {
-        if (child.tagName === H1_TAG) {
-            requestedDay = parseInt(child.textContent);
-        }
-    });
+    (function init() {
+        addRightPanelParentSpanElements();
+    })();
 
-    Array.from(currentMonthElement.children).forEach(function (child) {
-        if (child.tagName === H1_TAG) {
-            requestedMonth = getMonthNumberByMonthName(child.textContent);
-        }
-    });
+    function addRightPanelParentSpanElements() {
+        var rightPanel = getRightPanelWithStyleSet();
+        var requestedMonth = getRequestedMonth();
+        var requestedDay = getRequestedDay();
+        var requestedDayBirthdayUsers = getRequestedDayBirthdayUsers(requestedMonth, requestedDay);
+        var requestedDayNamedayUsers = getRequestedDayNamedayUsers(requestedMonth, requestedDay);
 
-    var rightPanel = document.getElementById(RIGHT_PANEL_ID);
-    var rightPanelStyle = rightPanel.style;
+        var rightPanelParentSpanElement = document.createElement(SPAN_TAG);
 
-    Array.from(rightPanel.children).forEach(function (child) {
-        if (child.tagName === SPAN_TAG) {
-            rightPanel.removeChild(child);
-        }
-    });
+        requestedDayBirthdayUsers.forEach(function (user) {
+            let rightPanelSpanElement = getRightPanelSpanElementWithUserElement(user, true);
 
-    var rightPanelWidth = null;
+            rightPanelParentSpanElement.appendChild(rightPanelSpanElement);
+        });
 
-    if (isDevice()) {
-        rightPanelWidth = '75%';
-    } else {
-        rightPanelWidth = '50%';
-    }
+        requestedDayNamedayUsers.forEach(function (user) {
+            let rightPanelSpanElement = getRightPanelSpanElementWithUserElement(user, false);
 
-    rightPanelStyle.setProperty('transition', 'width 0.3s linear');
-    rightPanelStyle.setProperty('width', rightPanelWidth);
+            rightPanelParentSpanElement.appendChild(rightPanelSpanElement);
+        });
 
-    var users = usersJson().users;
-    var requestedDayBirthdayUsers = [];
-    var requestedDayNamedayUsers = [];
+        rightPanel.appendChild(rightPanelParentSpanElement);
+    };
 
-    users.forEach(function (user) {
-        var bornDate = new Date(user.born);
-        var bornMonth = bornDate.getMonth() + 1;
-        var bornDay = bornDate.getDate();
-
-        if (requestedMonth === bornMonth && requestedDay === bornDay) {
-            requestedDayBirthdayUsers.push(user);
-        }
-
-        var nameDate = new Date(user.nameDate);
-        var nameMonth = nameDate.getMonth() + 1;
-        var nameDay = nameDate.getDate();
-
-        if (requestedMonth === nameMonth && requestedDay === nameDay) {
-            requestedDayNamedayUsers.push(user);
-        }
-    });
-
-    var rightPanelParentSpanElement = document.createElement(SPAN_TAG);
-
-    var addUserElementToRightPanelParentSpanElement = function (user, isBirthday) {
+    function getRightPanelSpanElementWithUserElement(user, isBirthday) {
         var userFullNameWithAge = user.name + ' ' + user.surname + ', ';
         var userYearsOldNumber = new Date().getFullYear() - new Date(user.born).getFullYear();
         userFullNameWithAge += userYearsOldNumber;
         userFullNameWithAge += (isBirthday) ? ' urodziny' : ' imieniny';
 
-        var rightPanelSpanNode = document.createElement(SPAN_TAG);
+        var rightPanelSpanElement = document.createElement(SPAN_TAG);
         var spanH2Node = document.createElement(H2_TAG);
         spanH2Node.textContent = userFullNameWithAge;
 
-        rightPanelSpanNode.appendChild(spanH2Node);
+        rightPanelSpanElement.appendChild(spanH2Node);
 
         // var userImgSrc = user.imgSrc;
         //for now it will be null
@@ -78,31 +47,122 @@ var squareButtonClickEvent = function () {
         var userImgSrc = null;
 
         if (userImgSrc) {
-            var USER_IMG_SRC = '../img/users/';
+            const USER_IMG_SRC = '../img/users/';
 
-            var spanIMGNode = document.createElement(IMG_TAG);
+            let spanIMGNode = document.createElement(IMG_TAG);
             spanIMGNode.src = USER_IMG_SRC + userImgSrc;
 
-            rightPanelSpanNode.appendChild(spanIMGNode);
+            rightPanelSpanElement.appendChild(spanIMGNode);
         } else {
-            var spanH1Node = document.createElement(I_TAG);
-            var spanH1NodeClassList = spanH1Node.classList;
+            let spanH1Node = document.createElement(I_TAG);
+            let spanH1NodeClassList = spanH1Node.classList;
             spanH1NodeClassList.add('fa');
             spanH1NodeClassList.add('fa-user-times');
 
-            rightPanelSpanNode.appendChild(spanH1Node);
+            rightPanelSpanElement.appendChild(spanH1Node);
         }
 
-        rightPanelParentSpanElement.appendChild(rightPanelSpanNode);
+        return rightPanelSpanElement;
     };
 
-    requestedDayBirthdayUsers.forEach(function (user) {
-        addUserElementToRightPanelParentSpanElement(user, true);
-    });
+    function getRequestedDay() {
+        var requestedDay = null;
+        var children = me.children;
 
-    requestedDayNamedayUsers.forEach(function (user) {
-        addUserElementToRightPanelParentSpanElement(user, false);
-    });
+        for (let childIndex in children) {
+            let child = children[childIndex];
+            let isH1Element = child.tagName === H1_TAG;
 
-    rightPanel.appendChild(rightPanelParentSpanElement);
+            if (isH1Element) {
+                requestedDay = parseInt(child.textContent);
+            }
+        }
+
+        return requestedDay;
+    };
+
+    function getRequestedMonth() {
+        var requestedMonth = null;
+        var currentMonthElement = document.getElementById(CURRENT_MONTH_ID);
+        var children = currentMonthElement.children;
+
+        for (let childIndex in children) {
+            let child = children[childIndex];
+            let isH1Element = child.tagName === H1_TAG;
+
+            if (isH1Element) {
+                requestedMonth = getMonthNumberByMonthName(child.textContent);
+            }
+        }
+
+        return requestedMonth;
+    };
+
+    function getRightPanelWithStyleSet() {
+        var rightPanel = document.getElementById(RIGHT_PANEL_ID);
+        var rightPanelStyle = rightPanel.style;
+
+        removeAllRightPanelChilds(rightPanel);
+
+        var rightPanelWidth = (isDevice()) ? '75%' : '50%';
+
+        rightPanelStyle.setProperty('transition', 'width 0.3s linear');
+        rightPanelStyle.setProperty('width', rightPanelWidth);
+
+        return rightPanel;
+    };
+
+    function removeAllRightPanelChilds(rightPanel) {
+        var rightPanelChildren = rightPanel.children;
+
+        for (let childIndex in rightPanelChildren) {
+            let child = rightPanelChildren[childIndex];
+            let isSpanElement = child.tagName === SPAN_TAG;
+
+            if (isSpanElement) {
+                rightPanel.removeChild(child);
+            }
+        }
+
+    };
+
+    function getRequestedDayBirthdayUsers(requestedMonth, requestedDay) {
+        var users = usersJson().users;
+        var requestedDayBirthdayUsers = [];
+
+        users.forEach(function (user) {
+            var bornDate = new Date(user.born);
+            var bornMonth = bornDate.getMonth() + 1;
+            var bornDay = bornDate.getDate();
+
+            var isUserBornThisMonth = requestedMonth === bornMonth;
+            var isUserBornThisDay = requestedDay === bornDay;
+
+            if (isUserBornThisMonth && isUserBornThisDay) {
+                requestedDayBirthdayUsers.push(user);
+            }
+        });
+
+        return requestedDayBirthdayUsers;
+    };
+
+    function getRequestedDayNamedayUsers(requestedMonth, requestedDay) {
+        var users = usersJson().users;
+        var requestedDayNamedayUsers = [];
+
+        users.forEach(function (user) {
+            var nameDate = new Date(user.nameDate);
+            var nameMonth = nameDate.getMonth() + 1;
+            var nameDay = nameDate.getDate();
+
+            var isUserNamedThisMonth = requestedMonth === nameMonth;
+            var isUserNamedThisDay = requestedDay === nameDay;
+
+            if (isUserNamedThisMonth && isUserNamedThisDay) {
+                requestedDayNamedayUsers.push(user);
+            }
+        });
+
+        return requestedDayNamedayUsers;
+    };
 };
