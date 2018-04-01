@@ -63,9 +63,17 @@ var createAlkoholsElements = function (createOnlyLastTimeChosenAlkohols) {
             aElement.appendChild(imgElement);
         });
 
+        aElement.appendChild(getAlkoholH2Element(alkohol));
         aElement.appendChild(getNewDivElement(alkohol));
 
         return aElement;
+    };
+
+    function getAlkoholH2Element(alkohol){
+        var h2Element = document.createElement('H2');
+        h2Element.textContent = alkohol.name;
+
+        return h2Element;
     };
 
     function getAElement(alkoholId) {
