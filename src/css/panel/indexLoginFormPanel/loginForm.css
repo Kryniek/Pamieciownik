@@ -1,0 +1,61 @@
+#loginForm{
+    top: 30px;
+    right: 30px;
+    position: fixed;
+
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    border-radius: 20%;
+
+    -webkit-box-shadow: 0px 0px 20px black;
+    -moz-box-shadow: 0px 0px 20px black;
+    box-shadow: 0px 0px 20px black;
+
+    border: 2px solid rgba(0, 130, 132, 0.7);
+
+    font-family:"ComfortaaRegularFont";
+    background-color: rgba(33, 33, 33, 0.6);
+
+    height: 50px;
+    width: 300px;
+}
+
+#loginForm > i {
+    font-size: 40px;
+
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+    color:rgba(0, 130, 132, 0.7);
+
+    transition: color 0.3s;
+}
+
+#loginForm > i:hover {
+    color:rgb(244, 182, 66);
+    cursor: pointer;
+}
+
+#loginForm > input {
+    font-size: 15px;
+    font-family:"ComfortaaRegularFont";
+
+    border: 2px solid rgba(0, 130, 132, 0.7);
+
+    -webkit-box-shadow: 0px 0px 10px black;
+    -moz-box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 10px black;
+
+    left: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+
+    caret-color: transparent;
+    letter-spacing: 1px;
+    padding: 2px;
+    width: 220px;
+
+    text-align: center;
+}
