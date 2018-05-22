@@ -1,4 +1,5 @@
 (function () {
+    showModalIfIE();
     injectDefaultHeader();
     injectRandomBackground();
     document.getElementById(MAIN_HAMBURGER_BUTTON_ID).addEventListener(CLICK_EVENT, mainHamburgerButtonClickEvent);

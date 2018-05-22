@@ -16,3 +16,4 @@ const LOADING_ID = 'loading';
 const RANDOM_RESULT_IMAGE_ID = 'randomResultImage';
 const RANDOM_RESULT_NAME_ID = 'randomResultName';
 const RANDOM_RESULT_DESCRIPTION_ID = 'randomResultDescription';
+const IE_MODAL_ID = 'ieModal';

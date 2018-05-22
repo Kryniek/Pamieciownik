@@ -1,0 +1,15 @@
+#ieModal{
+    z-index: 1000;
+    background:rgba(0, 0, 0, 0.8);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+#ieModal > h1 {
+    color: white;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
