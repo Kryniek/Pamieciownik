@@ -37,7 +37,12 @@ var squareButtonClickEvent = function () {
     };
 
     function getRightPanelSpanElementWithUserElement(user, isBirthday) {
-        var userFullNameWithAge = user.name + ' ' + user.surname + ', ';
+        var isUserLogged = window.localStorage.getItem(IS_USER_LOGGED_LOCAL_STORAGE_ID);
+
+        var userSurname = (isUserLogged) ? user.surname : '************';
+
+        var userFullNameWithAge = user.name + ' ' + userSurname + ', ';
+
         var userYearsOldNumber = new Date().getFullYear() - new Date(user.born).getFullYear();
         userFullNameWithAge += userYearsOldNumber;
         userFullNameWithAge += (isBirthday) ? ' urodziny' : ' imieniny';
@@ -48,12 +53,9 @@ var squareButtonClickEvent = function () {
 
         rightPanelSpanElement.appendChild(spanH2Node);
 
-        // var userImgSrc = user.imgSrc;
-        //for now it will be null
-        //#43 Allow users images to be viewed.
-        var userImgSrc = null;
+        var userImgSrc = user.imgSrc;
 
-        if (userImgSrc) {
+        if (userImgSrc && isUserLogged) {
             const USER_IMG_SRC = '../img/users/';
 
             let spanIMGNode = document.createElement(IMG_TAG);
