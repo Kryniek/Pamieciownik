@@ -127,3 +127,19 @@ function isDevice() {
 function getHtmlPageName() {
     return window.location.pathname.split("/").pop();
 };
+
+// Copy of: https://gist.github.com/iperelivskiy/4110988
+function getHashedString(inputToHash) {
+    var a = 1, c = 0, h, o;
+    if (inputToHash) {
+        a = 0;
+        /*jshint plusplus:false bitwise:false*/
+        for (h = inputToHash.length - 1; h >= 0; h--) {
+            o = inputToHash.charCodeAt(h);
+            a = (a << 6 & 268435455) + o + (o << 14);
+            c = a & 266338304;
+            a = c !== 0 ? a ^ c >> 21 : a;
+        }
+    }
+    return String(a);
+};

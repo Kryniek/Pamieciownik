@@ -17,13 +17,15 @@ var onLoginFormLoginClick = function () {
     })();
 
     function validateInput(value) {
-        const PASSWORD = 'superprokutas';
+        const PASSWORD_HASH = '56652968';
 
         if (!value) {
             return false;
         }
 
-        if (PASSWORD !== value.toLowerCase()) {
+        var hashedValue = getHashedString(value.toLowerCase());
+
+        if (PASSWORD_HASH !== hashedValue) {
             return false;
         }
 
