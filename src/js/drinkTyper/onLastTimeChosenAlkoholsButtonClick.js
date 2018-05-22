@@ -3,5 +3,7 @@ var onLastTimeChosenAlkoholsButtonClick = function () {
         hideShowAlkoholsButtonElement();
 
         createAlkoholsElements(true);
+
+        addScrollEventIfIsFirefox();
     })();
 };

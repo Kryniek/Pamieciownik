@@ -3,5 +3,7 @@ var onAllAlkoholsButtonClick = function () {
         hideShowAlkoholsButtonElement();
 
         createAlkoholsElements();
+
+        addScrollEventIfIsFirefox();
     })();
 };
