@@ -27,8 +27,9 @@
             </div>
         </div>
         <div id="loginForm">
-            <input placeholder="hasło" type="password"/>
-            <i class="fa fa-sign-in" aria-hidden="true"></i>
+            <input id="loginFormInput" placeholder="hasło" type="password"/>
+            <i id="loginFormLoginButton" class="fa fa-sign-in" aria-hidden="true"></i>
+            <i id="loginFormLogoutButton" class="fa fa-sign-out" aria-hidden="true"></i>
         </div>
     </div>
 
@@ -45,6 +46,13 @@
     <script src="src/js/inject/injectRandomBackground.js"></script>
     <script src="src/js/utils.js"></script>
     <script src="src/js/events/events.js"></script>
+    <!-- INDEX JS -->
+    <script src="src/js/index/hideInputAndLoginButton.js"></script>
+    <script src="src/js/index/onIndexLoad.js"></script>
+    <script src="src/js/index/onLoginFormLoginClick.js"></script>
+    <script src="src/js/index/onLoginFormLogoutClick.js"></script>
+    <script src="src/js/events/indexEvents.js"></script>
+    <!-- INDEX JS -->
 </body>
 
 </html>

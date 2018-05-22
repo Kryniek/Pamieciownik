@@ -17,3 +17,7 @@ const RANDOM_RESULT_IMAGE_ID = 'randomResultImage';
 const RANDOM_RESULT_NAME_ID = 'randomResultName';
 const RANDOM_RESULT_DESCRIPTION_ID = 'randomResultDescription';
 const IE_MODAL_ID = 'ieModal';
+const LOGIN_FORM = 'loginForm';
+const LOGIN_FORM_LOGIN_BUTTON = 'loginFormLoginButton';
+const LOGIN_FORM_LOGOUT_BUTTON = 'loginFormLogoutButton';
+const LOGIN_FORM_INPUT = 'loginFormInput';
