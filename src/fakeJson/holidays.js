@@ -206,96 +206,91 @@ var holidays = function () {
         day: 30
     }, {
         id: 42,
-        name: 'Dzień Bez Alkoholu',
-        month: 6,
-        day: 1
-    }, {
-        id: 43,
         name: 'Światowy Dzień Pocałunku',
         month: 6,
         day: 6
     }, {
-        id: 44,
+        id: 43,
         name: 'Dzień Przytulania',
         month: 6,
         day: 24
     }, {
-        id: 45,
+        id: 44,
         name: 'Święto Hot-doga',
         month: 7,
         day: 4
     }, {
-        id: 46,
+        id: 45,
         name: 'Dzień bez Telefonu Komórkowego',
         month: 7,
         day: 15
     }, {
-        id: 47,
+        id: 46,
         name: 'Dzień Musztardy',
         month: 8,
         day: 6
     }, {
-        id: 48,
+        id: 47,
         name: 'Dzień Błyszczyków i Smakowitych Ust',
         month: 9,
         day: 3
     }, {
-        id: 49,
+        id: 48,
         name: 'Dzień Programisty (w latach przestępnych)',
         month: 9,
         day: 12
     }, {
-        id: 50,
+        id: 49,
         name: 'Dzień Programisty (w latach nieprzestępnych)',
         month: 9,
         day: 13
     }, {
-        id: 51,
+        id: 50,
         name: 'Dzień Taniego Wina',
         month: 11,
         day: 4
     }, {
-        id: 52,
+        id: 51,
         name: 'Światowy Dzień Gry Wstępnej',
         month: 11,
         day: 9
     }, {
-        id: 53,
+        id: 52,
         name: 'Dzień Pluszowego Misia',
         month: 11,
         day: 25
     }, {
-        id: 54,
+        id: 53,
         name: 'Dzień Pocałunku',
         month: 11,
         day: 28
     }, {
-        id: 55,
+        id: 54,
         name: 'Dzień Chruścików',
         month: 12,
         day: 11
     }, {
-        id: 56,
+        id: 55,
         name: 'Dzień Bez Przekleństw',
         month: 12,
         day: 17
     }, {
-        id: 57,
+        id: 56,
         name: 'Dzień Orgazmu',
         month: 12,
         day: 21
     }, {
-        id: 58,
+        id: 57,
         name: 'Międzynarodowy Dzień Pocałunku',
         month: 12,
         day: 28
     }, {
-        id: 59,
+        id: 58,
         name: 'Dzień Bez Bielizny',
         month: 12,
         day: 31
     }, {
-        id: 60,
+        id: 59,
         name: 'Dzień Masturbacji',
         month: 2,
         day: 25
