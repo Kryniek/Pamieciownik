@@ -294,5 +294,10 @@ var holidays = function () {
         name: 'Dzień Masturbacji',
         month: 2,
         day: 25
+    }, {
+        id: 59,
+        name: 'Światowy Dzień Królika',
+        month: 9,
+        day: 26
     }];
 };

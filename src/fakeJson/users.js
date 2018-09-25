@@ -273,6 +273,13 @@ var usersJson = function () {
             born: '1984-03-20',
             nameDate: '',
             imgSrc: 'gm1984.jpg'
+        }, {
+            id: 40,
+            name: 'Artur',
+            surname: 'Wojciechowski',
+            born: '1993-06-08',
+            nameDate: '',
+            imgSrc: 'aw1993.jpg'
         }]
     };
 };
