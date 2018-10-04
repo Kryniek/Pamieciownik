@@ -43,7 +43,8 @@ var squareButtonClickEvent = function () {
 
         var userFullNameWithAge = user.name + ' ' + userSurname + ', ';
 
-        var userYearsOldNumber = new Date().getFullYear() - new Date(user.born).getFullYear();
+        var userLastDayOfLife = user.lastDayOfLife;
+        var userYearsOldNumber = ((userLastDayOfLife) ? new Date(userLastDayOfLife).getFullYear() : new Date().getFullYear()) - new Date(user.born).getFullYear();
         userFullNameWithAge += userYearsOldNumber;
         userFullNameWithAge += (isBirthday) ? ' urodziny' : ' imieniny';
 

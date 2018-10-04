@@ -132,7 +132,8 @@ var usersJson = function () {
             surname: 'Szatkiewicz-Maciąg',
             born: '2005-08-21',
             nameDate: '',
-            imgSrc: 'psm2005.JPG'
+            imgSrc: 'psm2005.JPG',
+            lastDayOfLife : '2018-08-16'
         }, {
             id: 20,
             name: 'Bubina',
