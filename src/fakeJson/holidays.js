@@ -299,5 +299,10 @@ var holidays = function () {
         name: 'Światowy Dzień Królika',
         month: 9,
         day: 26
+    }, {
+        id: 60,
+        name: 'Dzień Mężczyzn',
+        month: 3,
+        day: 10
     }];
 };
