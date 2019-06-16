@@ -5,7 +5,7 @@ var usersJson = function () {
             name: 'Justyna',
             surname: 'Mrzygłocka',
             born: '1992-01-30',
-            nameDate: '',
+            nameDate: '1992-03-12',
             imgSrc: 'jm1992.jpg'
         }, {
             id: 2,
