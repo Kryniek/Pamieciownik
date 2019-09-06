@@ -295,6 +295,20 @@ var usersJson = function () {
             born: '1973-11-19',
             nameDate: '',
             imgSrc: ''
+        }, {
+            id: 43,
+            name: 'Kasia',
+            surname: 'Krupska',
+            born: '2000-01-21',
+            nameDate: '',
+            imgSrc: 'kk2000.jpg'
+        }, {
+            id: 44,
+            name: 'Antonina',
+            surname: 'Lewicka',
+            born: '2019-09-05',
+            nameDate: '',
+            imgSrc: ''
         }]
     };
 };
