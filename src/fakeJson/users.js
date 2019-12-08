@@ -81,7 +81,7 @@ var usersJson = function () {
             id: 12,
             name: 'Gosia',
             surname: 'Mrzygłocka',
-            born: '2008-12-11',
+            born: '2009-12-11',
             nameDate: '',
             imgSrc: 'gm2008.jpg'
         }, {
