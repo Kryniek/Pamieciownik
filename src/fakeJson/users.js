@@ -262,11 +262,11 @@ var usersJson = function () {
             imgSrc: 'ar1988.jpg'
         }, {
             id: 38,
-            name: 'Małgorzata',
-            surname: 'Wendt',
-            born: '1992-08-13',
+            name: 'Michał',
+            surname: 'Zabielski',
+            born: '1998-11-26',
             nameDate: '',
-            imgSrc: 'mw1992.jpg'
+            imgSrc: 'mz1998.jpg'
         }, {
             id: 39,
             name: 'Grzegorz',
@@ -316,6 +316,13 @@ var usersJson = function () {
             born: '1993-06-15',
             nameDate: '1993-09-10',
             imgSrc: ''
+        }, {
+            id: 46,
+            name: 'Ula',
+            surname: 'Bara',
+            born: '1999-02-23',
+            nameDate: '',
+            imgSrc: 'ub1999.jpg'
         }]
     };
 };
