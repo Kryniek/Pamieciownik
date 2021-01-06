@@ -297,27 +297,20 @@ var usersJson = function () {
             imgSrc: ''
         }, {
             id: 43,
-            name: 'Kasia',
-            surname: 'Krupska',
-            born: '2000-01-21',
-            nameDate: '',
-            imgSrc: 'kk2000.jpg'
-        }, {
-            id: 44,
             name: 'Antonina',
             surname: 'Lewicka',
             born: '2019-09-05',
             nameDate: '',
             imgSrc: ''
         }, {
-            id: 45,
+            id: 44,
             name: 'Łukasz',
             surname: 'Wiatr',
             born: '1993-06-15',
             nameDate: '1993-09-10',
             imgSrc: ''
         }, {
-            id: 46,
+            id: 45,
             name: 'Ula',
             surname: 'Bara',
             born: '1999-02-23',
