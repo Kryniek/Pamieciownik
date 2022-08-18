@@ -254,13 +254,6 @@ var usersJson = function () {
             nameDate: '',
             imgSrc: 'aje1978.jpg'
         }, {
-            id: 37,
-            name: 'Arek',
-            surname: 'Richert',
-            born: '1988-03-04',
-            nameDate: '',
-            imgSrc: 'ar1988.jpg'
-        }, {
             id: 38,
             name: 'Michał',
             surname: 'Zabielski',
@@ -309,13 +302,6 @@ var usersJson = function () {
             born: '1993-06-15',
             nameDate: '1993-09-10',
             imgSrc: ''
-        }, {
-            id: 45,
-            name: 'Ula',
-            surname: 'Bara',
-            born: '1999-02-23',
-            nameDate: '',
-            imgSrc: 'ub1999.jpg'
         }]
     };
 };
